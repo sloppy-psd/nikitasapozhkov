@@ -1,346 +1,257 @@
 <!DOCTYPE html>
+<html>
 
-
-<html> 
-
-<head> 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>asics silver pack</title> 
-
-<!-- MAIN STYLE CSS -->
-<link rel="stylesheet" href="./css/style.css">
-<!-- MAIN STYLE CSS -->
-
-<!-- FAVICON -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<!-- FAVICON -->
-
-<!-- FLICKITY -->
-<link rel="stylesheet" type="text/css"  href="/flickity-style.css">
-<link rel="stylesheet" href="/node_modules/flickity/css/flickity.css" media="screen">
-<link rel="stylesheet" href="/node_modules/flickity-fade/flickity-fade.css" media="screen">
-
-<script src="/jquery360.js"></script>
-
-<script src="/node_modules/flickity/dist/flickity.pkgd.js"></script>
-<script src="/node_modules/flickity-fade/flickity-fade.js"></script>
-<!-- FLICKITY -->
-
-</head> 
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>asics silver pack</title>
+    <!-- MAIN STYLE CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- MAIN STYLE CSS -->
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- FAVICON -->
+    <!-- FLICKITY -->
+    <link rel="stylesheet" type="text/css" href="/flickity-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+    <!-- FLICKITY -->
+</head>
 
 <body>
-
-
-<!-- HEADER -->
-<nav class="header">
-      <div class="sapozhkov">
-      <a href="index.html">Nikita Sapozhkov <br> graphic & type design</a>
-      </div>
-      
-<div class="buttons" >
-  <button onclick="document.location='projects.html'" class="icon-btn add-btn" >
-    <div class="btn-txt">Projects</div>
-  </button>
-  <button onclick="document.location='about.html'" class="icon-btn add-btn2">  
-    <div class="btn-txt">About</div>
-  </button>
-</div>
-
-
-
-       
-
-<!-- VARIABLE TAG -->
-       <div class="my-variable-text" id="VAR" >C</div>
-  <script>
-function randomizeText() {
-  var w = window.innerWidth;
-   // randomWidth = Math.random() * (200 - 100) + 100;
-  document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/9;
-if (w<=1025) {
-      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/10;
-  }
-  if (w<=985) {
-      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/12;
-  }
-  if (w<=825) {
-      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/4.9;
-  }
-   if (w<=811) {
-      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/4.9;
-  }
-}
-setInterval(randomizeText, 1);
-
-</script>
-<!-- VARIABLE TAG -->
-
-</nav>    
-<!-- HEADER -->
-
-
-
-<!-- ABOUT -->
-<div class="project_name">
-  <h1 >Asics silver pack</h1>
-</div>
-
-<div class="main_img_box">
-  <img src="/img/asics-silver-pack/asics_sp_main_00.png" alt="asics_silver_main" >
-</div>
-
-
-
-
-<!-- PROJECT CAPTION -->
-<div class="project_caption">
- 
-
-<figcaption class="types">
-  <li>• Field: Graphics & lettering</li>
-  <li>• Client: Street Beat </li>
-  <li>• Year: 2019</li>
-</figcaption>
-  
-  <h1 class="types-description">
-Asix Silver Pack is a special Streetbeat project, based on the visual aesthetics of space and travel in the future. For this purpose the lettering was created that reflects the name of the Asics Silver Pack collection. To complement the lettering, graphics were invented, rethinking the brand sign. Its shapes resemble space orbits and navigation lines, as if from futuristic starship interfaces. Combined with each other, lettering and graphics form a recognizable visual image that conveys the character of the collection and complements store windows, transforming them into a new world of their own, creating an atmosphere of deep space and telling us about the future.
-  </h1>
-</div>
-<!-- PROJECT CAPTION -->
-
-
-
-<!-- PROJECT MAIN CONTENT -->
-
-<!-- FULL WIDTH IMAGE -->
- <div class="main_img_box">
-  <img src="/img/asics-silver-pack/asics_silver_main_03-min.png" alt="asics_silver_main" >
+    <!-- HEADER -->
+    <nav class="header">
+        <div class="sapozhkov">
+            <a href="index.html">Nikita Sapozhkov <br> graphic & type design</a>
+        </div>
+        <div class="buttons">
+            <button onclick="document.location='projects.html'" class="icon-btn add-btn">
+                <div class="btn-txt">Projects</div>
+            </button>
+            <button onclick="document.location='about.html'" class="icon-btn add-btn2">
+                <div class="btn-txt">About</div>
+            </button>
+        </div>
+        <!-- VARIABLE TAG -->
+        <div class="my-variable-text" id="VAR">C</div>
+        <script>
+        function randomizeText() {
+            var w = window.innerWidth;
+            // randomWidth = Math.random() * (200 - 100) + 100;
+            document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w / 9;
+            if (w <= 1025) {
+                document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w / 10;
+            }
+            if (w <= 985) {
+                document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w / 12;
+            }
+            if (w <= 825) {
+                document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w / 4.9;
+            }
+            if (w <= 811) {
+                document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w / 4.9;
+            }
+        }
+        setInterval(randomizeText, 1);
+        </script>
+        <!-- VARIABLE TAG -->
+    </nav>
+    <!-- HEADER -->
+    <!-- ABOUT -->
+    <div class="project_name">
+        <h1>Asics silver pack</h1>
     </div>
-<!-- FULL WIDTH IMAGE -->
-
-
-<!--IMAGES CAPTIONS-->
-<div class="project_noneback" style="background: white; margin-top: -5px; ">
-  <h2 class="types" style="margin-top: 15px;">
-    Basic graphic elements
-    </h2>
-  </div>
-<!--IMAGES CAPTIONS-->
-
-
-<!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
-  <div  class="carousel-container" style="background: white">
-
-<div class="button-group">
-  <button class="button button--previous-wrapped">Previous wrapped</button>
-  <button class="button button--next-wrapped">Next wrapped</button>
-</div>
-
-<div class="carousel" >
-  <div class="carousel-cell" >
-          <img src="/img/asics-silver-pack/asp_graphic_00.png" alt="asics_silver_graphic-0" >
-  </div>
-  <div class="carousel-cell">
-      <img src="/img/asics-silver-pack/asp_graphic_01.png" alt="asics_silver_graphic-1" >
-  </div>
-   <div class="carousel-cell">
-      <img src="/img/asics-silver-pack/asp_graphic_02.png" alt="asics_silver_graphic-2" >
-  </div>
-  <div class="carousel-cell">
-      <img src="/img/asics-silver-pack/asp_graphic_03.png" alt="asics_silver_graphic-3" >
-  </div>
-</div>
-    <p  class="carousel-status"></p>
-
-</div>
-<!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
-
-
-<!-- FLICKITY SINGLE IMAGE -->
-<div class="no-carousel" style="background: white" >
-  <div class="carousel-cell">
-          <img src="/img/asics-silver-pack/asp_graphic_04.png" alt="asics_silver_graphic-4" >
-  </div>
-</div>
-<!-- FLICKITY SINGLE IMAGE -->
-
-
-<!--IMAGES CAPTIONS-->
-<div class="project_noneback" >
-  <h2 class="types" >
-    Posters
-    </h2>
-  </div>
-<!--IMAGES CAPTIONS-->
-
-
-<!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
-  <div  class="carousel-container" >
-
-<div class="button-group">
-  <button class="button button--previous-wrapped">Previous wrapped</button>
-  <button class="button button--next-wrapped">Next wrapped</button>
-</div>
-
-<div class="carousel" >
-  <div class="carousel-cell" >
-          <img src="/img/asics-silver-pack/asp_poster_00.jpg" alt="asp_poster_00-0" >
-  </div>
-  <div class="carousel-cell">
-      <img src="/img/asics-silver-pack/asp_poster_01.jpg" alt="asp_poster_00-1"  >
-  </div>
-   <div class="carousel-cell">
-      <img src="/img/asics-silver-pack/asp_poster_02.jpg" alt="asp_poster_00-2" >
-  </div>
-  
-</div>
-    <p  class="carousel-status"></p>
-
-</div>
-<!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
-
-
-<!-- FULL WIDTH IMAGE -->
- <div class="main_img_box">
-  <img src="/img/asics-silver-pack/asp_process_00.png" alt="asics_silver_main" >
+    <div class="main_img_box">
+        <img src="img/asics-silver-pack/asics_sp_main_00.png" alt="asics_silver_main">
     </div>
-<!-- FULL WIDTH IMAGE -->
-
-
-<!--IMAGES CAPTIONS-->
-<div class="project_noneback" >
-  <h2 class="types" >
-        Variations of lettering ‘Silver Pack’
-    </h2>
-  </div>
-<!--IMAGES CAPTIONS-->
-
-
-<!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
-  <div  class="carousel-container" >
-
-<div class="button-group">
-  <button class="button button--previous-wrapped">Previous wrapped</button>
-  <button class="button button--next-wrapped">Next wrapped</button>
-</div>
-
-<div class="carousel" >
-  <div class="carousel-cell" >
-          <img src="/img/asics-silver-pack/asp_lettering_00.png" alt="asics_silver_lettering-0">
-  </div>
-  <div class="carousel-cell">
-      <img src="/img/asics-silver-pack/asp_lettering_01.png" alt="asics_silver_lettering-1" >
-  </div>
-   <div class="carousel-cell">
-      <img src="/img/asics-silver-pack/asp_lettering_02.png" alt="asics_silver_lettering-2" >
-  </div>
-    <div class="carousel-cell">
-      <img src="/img/asics-silver-pack/asp_lettering_04.png" alt="asics_silver_lettering-4" >
-  </div>
-</div>
-    <p  class="carousel-status"></p>
-
-</div>
-<!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
-
-
-<!-- FULL WIDTH IMAGE -->
- <div class="main_img_box">
-  <img src="/img/asics-silver-pack/asp_lettering_03.png" alt="asics_silver_lettering-3" >
+    <!-- PROJECT CAPTION -->
+    <div class="project_caption">
+        <figcaption class="types">
+            <li>• Field: Graphics & lettering</li>
+            <li>• Client: Street Beat </li>
+            <li>• Year: 2019</li>
+        </figcaption>
+        <h1 class="types-description">
+            Asix Silver Pack is a special Streetbeat project, based on the visual aesthetics of space and travel in the future. For this purpose the lettering was created that reflects the name of the Asics Silver Pack collection. To complement the lettering, graphics were invented, rethinking the brand sign. Its shapes resemble space orbits and navigation lines, as if from futuristic starship interfaces. Combined with each other, lettering and graphics form a recognizable visual image that conveys the character of the collection and complements store windows, transforming them into a new world of their own, creating an atmosphere of deep space and telling us about the future.
+        </h1>
     </div>
-<!-- FULL WIDTH IMAGE -->
-
-
-<!--IMAGES CAPTIONS-->
-<div class="project_noneback" >
-  <h2 class="types" >
-        Proposal
-    </h2>
-  </div>
-<!--IMAGES CAPTIONS-->
-
-
-<!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
-  <div  class="carousel-container" >
-
-<div class="button-group">
-  <button class="button button--previous-wrapped">Previous wrapped</button>
-  <button class="button button--next-wrapped">Next wrapped</button>
-</div>
-
-<div class="carousel" >
-  <div class="carousel-cell" >
-          <img src="/img/asics-silver-pack/asp_proposal_00.png" alt="asics_silver_proposal-0" >
-  </div>
-  <div class="carousel-cell">
-      <img src="/img/asics-silver-pack/asp_proposal_01.png" alt="asics_silver_proposal-1" >
-  </div>
-   <div class="carousel-cell">
-      <img src="/img/asics-silver-pack/asp_proposal_02.png" alt="asics_silver_proposal-2" >
-  </div>
-  
-</div>
-    <p  class="carousel-status"></p>
-
-</div>
-<!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
-
-
-<!--IMAGES CAPTIONS-->
-<div class="project_noneback" style="background: white; " >
-  <h2 class="types" style="margin-top: 20px;" >
-        Final letterwork
-    </h2>
-  </div>
-<!--IMAGES CAPTIONS-->
-
-<!-- FLICKITY SINGLE IMAGE -->
-<div class="no-carousel" style="background: white; padding-bottom: 70px;" >
-  <div class="carousel-cell">
-          <img src="/img/asics-silver-pack/asp_final_00.png" alt="asics_silver_final-00" >
-  </div>
-</div>
-<!-- FLICKITY SINGLE IMAGE -->
-
-
-<!-- FULL WIDTH IMAGE -->
- <div class="main_img_box">
-  <img src="/img/asics-silver-pack/asp_photo_00.jpg" alt="asics_silver_photo-00" >
+    <!-- PROJECT CAPTION -->
+    <!-- PROJECT MAIN CONTENT -->
+    <!-- FULL WIDTH IMAGE -->
+    <div class="main_img_box">
+        <img src="img/asics-silver-pack/asics_silver_main_03-min.png" alt="asics_silver_main">
     </div>
-<!-- FULL WIDTH IMAGE -->
-
-<!---------------------------- CAROUSEL COUNTER ---------------------------->
-
-<script type="text/javascript" src="/carousel-counter.js"></script>
-
-<!---------------------------- CAROUSEL COUNTER ---------------------------->
-
-
-<!-- PROJECT MAIN CONTENT -->
-
-
-
-
-<div class="line"></div>
-
-<!-- FOOTER -->
- <footer class="footer">
-    <div>©2021, Nikita Sapozhkov. All rights reserved.<br>Co-Founder at Any Letters Here - Alh</div>
-    <div class="social">
-      <a href="https://www.instagram.com/nikita_sapozhkov/" target="_blank">instagram</a>
-      <a href="https://www.facebook.com/nikita.sapozhkov" target="_blank">facebook</a>
+    <!-- FULL WIDTH IMAGE -->
+    <!--IMAGES CAPTIONS-->
+    <div class="project_noneback" style="background: white; margin-top: -5px; ">
+        <h2 class="types" style="margin-top: 15px;">
+            Basic graphic elements
+        </h2>
     </div>
-  </footer>
-<!-- FOOTER -->
-
- 
- </body> 
+    <!--IMAGES CAPTIONS-->
+    <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
+    <div class="carousel-container" style="background: white">
+        <div class="button-group">
+            <button class="button button--previous-wrapped">Previous wrapped</button>
+            <button class="button button--next-wrapped">Next wrapped</button>
+        </div>
+        <div class="carousel">
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_graphic_00.png" alt="asics_silver_graphic-0">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_graphic_01.png" alt="asics_silver_graphic-1">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_graphic_02.png" alt="asics_silver_graphic-2">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_graphic_03.png" alt="asics_silver_graphic-3">
+            </div>
+        </div>
+        <p class="carousel-status"></p>
+    </div>
+    <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
+    <!-- FLICKITY SINGLE IMAGE -->
+    <div class="no-carousel" style="background: white">
+        <div class="carousel-cell">
+            <img src="img/asics-silver-pack/asp_graphic_04.png" alt="asics_silver_graphic-4">
+        </div>
+    </div>
+    <!-- FLICKITY SINGLE IMAGE -->
+    <!--IMAGES CAPTIONS-->
+    <div class="project_noneback">
+        <h2 class="types">
+            Posters
+        </h2>
+    </div>
+    <!--IMAGES CAPTIONS-->
+    <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
+    <div class="carousel-container">
+        <div class="button-group">
+            <button class="button button--previous-wrapped">Previous wrapped</button>
+            <button class="button button--next-wrapped">Next wrapped</button>
+        </div>
+        <div class="carousel">
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_poster_00.jpg" alt="asp_poster_00-0">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_poster_01.jpg" alt="asp_poster_00-1">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_poster_02.jpg" alt="asp_poster_00-2">
+            </div>
+        </div>
+        <p class="carousel-status"></p>
+    </div>
+    <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
+    <!-- FULL WIDTH IMAGE -->
+    <div class="main_img_box">
+        <img src="img/asics-silver-pack/asp_process_00.png" alt="asics_silver_main">
+    </div>
+    <!-- FULL WIDTH IMAGE -->
+    <!--IMAGES CAPTIONS-->
+    <div class="project_noneback">
+        <h2 class="types">
+            Variations of lettering ‘Silver Pack’
+        </h2>
+    </div>
+    <!--IMAGES CAPTIONS-->
+    <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
+    <div class="carousel-container">
+        <div class="button-group">
+            <button class="button button--previous-wrapped">Previous wrapped</button>
+            <button class="button button--next-wrapped">Next wrapped</button>
+        </div>
+        <div class="carousel">
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_lettering_00.png" alt="asics_silver_lettering-0">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_lettering_01.png" alt="asics_silver_lettering-1">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_lettering_02.png" alt="asics_silver_lettering-2">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_lettering_04.png" alt="asics_silver_lettering-4">
+            </div>
+        </div>
+        <p class="carousel-status"></p>
+    </div>
+    <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
+    <!-- FULL WIDTH IMAGE -->
+    <div class="main_img_box">
+        <img src="img/asics-silver-pack/asp_lettering_03.png" alt="asics_silver_lettering-3">
+    </div>
+    <!-- FULL WIDTH IMAGE -->
+    <!--IMAGES CAPTIONS-->
+    <div class="project_noneback">
+        <h2 class="types">
+            Proposal
+        </h2>
+    </div>
+    <!--IMAGES CAPTIONS-->
+    <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
+    <div class="carousel-container">
+        <div class="button-group">
+            <button class="button button--previous-wrapped">Previous wrapped</button>
+            <button class="button button--next-wrapped">Next wrapped</button>
+        </div>
+        <div class="carousel">
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_proposal_00.png" alt="asics_silver_proposal-0">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_proposal_01.png" alt="asics_silver_proposal-1">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/asics-silver-pack/asp_proposal_02.png" alt="asics_silver_proposal-2">
+            </div>
+        </div>
+        <p class="carousel-status"></p>
+    </div>
+    <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
+    <!--IMAGES CAPTIONS-->
+    <div class="project_noneback" style="background: white; ">
+        <h2 class="types" style="margin-top: 20px;">
+            Final letterwork
+        </h2>
+    </div>
+    <!--IMAGES CAPTIONS-->
+    <!-- FLICKITY SINGLE IMAGE -->
+    <div class="no-carousel" style="background: white; padding-bottom: 70px;">
+        <div class="carousel-cell">
+            <img src="img/asics-silver-pack/asp_final_00.png" alt="asics_silver_final-00">
+        </div>
+    </div>
+    <!-- FLICKITY SINGLE IMAGE -->
+    <!-- FULL WIDTH IMAGE -->
+    <div class="main_img_box">
+        <img src="img/asics-silver-pack/asp_photo_00.jpg" alt="asics_silver_photo-00">
+    </div>
+    <!-- FULL WIDTH IMAGE -->
+    <!---------------------------- CAROUSEL COUNTER ---------------------------->
+    <script type="text/javascript" src="carousel-counter.js"></script>
+    <!---------------------------- CAROUSEL COUNTER ---------------------------->
+    <!-- PROJECT MAIN CONTENT -->
+    <div class="line"></div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div>©2021, Nikita Sapozhkov. All rights reserved.<br>Co-Founder at Any Letters Here - Alh</div>
+        <div class="social">
+            <a href="https://www.instagram.com/nikita_sapozhkov/" target="_blank">instagram</a>
+            <a href="https://www.facebook.com/nikita.sapozhkov" target="_blank">facebook</a>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+</body>
 
 </html>
