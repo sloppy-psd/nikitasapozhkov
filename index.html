@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+
+<html> 
+
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Nikita Sapozhkov</title> 
+<link rel="stylesheet" href="./css/style.css">
+
+<!-- FAVICON -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<!-- FAVICON -->
+
+
+</head> 
+
+
+
+<body>
+<script >var scrollEventHandler = function()
+{
+  window.scroll(0, window.pageYOffset)
+}
+
+window.addEventListener("scroll", scrollEventHandler, false);</script>
+<!-- HEADER -->
+<nav class="header">
+		  <div class="sapozhkov">
+		  <a href="index.html">Nikita Sapozhkov <br> graphic & type design</a>
+		  </div>
+
+
+<div class="buttons" >
+  <button onclick="document.location='projects.html'" class="icon-btn add-btn" >
+    <div class="btn-txt">Projects</div>
+  </button>
+  <button onclick="document.location='about.html'" class="icon-btn add-btn2">  
+    <div class="btn-txt">About</div>
+  </button>
+</div>
+<!-- HEADER -->
+
+<!-- VARIABLE TAG -->
+       <div class="my-variable-text" id="VAR" >C</div>
+  <script>
+function randomizeText() {
+  var w = window.innerWidth;
+   // randomWidth = Math.random() * (200 - 100) + 100;
+  document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/9;
+if (w<=1025) {
+      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/10;
+  }
+  if (w<=985) {
+      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/12;
+  }
+  if (w<=825) {
+      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/4.9;
+  }
+   if (w<=811) {
+      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/4.9;
+  }
+}
+setInterval(randomizeText, 1);
+
+</script>
+<!-- VARIABLE TAG -->
+
+</nav>		
+<!-- HEADER -->
+
+
+
+
+<!-- MAIN -->
+<div class="news-block">
+<button class="news" onmouseover="slideIn()" onmouseout="slideOut()" onclick="document.location='asics_silver_pack.html'"> 
+	<h1>Asics silver pack</h1>
+</button>
+
+<button class="news" onmouseover="slideIn2()" onmouseout="slideOut2()" onclick="document.location='projects_sb_streetball.html'"> 
+	<h1>Basketball XXl</h1>
+</button>
+
+<button class="news" onmouseover="slideIn3()" onmouseout="slideOut3()" onclick="document.location='projects_vetvi.html'"> 
+	<h1>Vetvi Flowers</h1>
+</button>
+
+</div>
+
+<script>
+	function slideIn() {
+	var newsImg_1 = document.getElementById("asicsSP");
+       	newsImg_1.style.right = "0";
+    	newsImg_1.style.transition = "right 0.5s";
+}
+
+    function slideIn2() {	
+    		var newsImg_2 = document.getElementById("sbBXXL");
+       	newsImg_2.style.right = "0";
+    	newsImg_2.style.transition = "right 0.5s";
+}
+
+   function slideIn3() {	
+    		var newsImg_3 = document.getElementById("vetvi");
+       	newsImg_3.style.right = "0";
+    	newsImg_3.style.transition = "right 0.5s";
+}
+
+	function slideOut() {
+	var newsImg_1 = document.getElementById("asicsSP");
+       	newsImg_1.style.right = "-80%";
+    	newsImg_1.style.transition = "right 0.5s";
+    }
+	function slideOut2() {
+    	 	var newsImg_2 = document.getElementById("sbBXXL");
+       	newsImg_2.style.right = "-80%";
+    	newsImg_2.style.transition = "right 0.5s";
+}
+
+	function slideOut3() {
+	var newsImg_3 = document.getElementById("vetvi");
+       	newsImg_3.style.right = "-80%";
+    	newsImg_3.style.transition = "right 0.5s";
+    }
+</script>
+
+<!-- MAIN -->
+
+
+<!-- BACKGROUND MAIN INFO -->
+<div class="back-info">
+<button class="main-back" onmouseover="myFunction1()" onmouseout="myFunction2()" > 
+	<h1 id="showInfo">this 3D sculpture created at 2021.11.01 by Georgii Sapozhkov and textured by me.</h1>
+</button>
+</div>
+<script>
+	function myFunction2() {
+	var text1 = document.getElementById("showInfo");
+   // text1.style.display = "none";
+    text1.style.transition = "opacity 0.4s";
+    text1.style.opacity = "0";
+}
+	function myFunction1() {
+	var text2 = document.getElementById("showInfo");
+  // text2.style.display = "block";
+    text2.style.opacity = "100";
+    text2.style.transition = "opacity 0.5s";
+}
+</script>
+
+<!-- BACKGROUND MAIN INFO -->
+
+
+
+<!-- THREE JS SCENE -->
+
+<div class="canvas">
+<canvas id="c"> 
+
+	<script type="module" src="/js/script.js"></script>
+
+</canvas>
+</div>
+
+<!-- THREE JS SCENE -->
+
+
+
+
+
+<!-- PROJECTS ---------------LOAD PROJECTS HERE, JUST COPY CODE--> 
+<div class="projects-new" >
+	<a href="asics_silver_pack.html">	
+			<img class="project_img" id="asicsSP" onmouseover="slideIn()" onmouseout="slideOut()" src="/img/new-baner/AsicsSilverPack-cover.png" alt="silverpack" >
+		</a>
+		<a href="projects_sb_streetball.html">	
+			<img class="project_img" id="sbBXXL"  onmouseover="slideIn2()" onmouseout="slideOut2()" src="/img/new-baner/StreetXXL-cover.png" alt="silverpack" >
+	
+	<a href="projects_vetvi.html">	
+			<img class="project_img" id="vetvi" onmouseover="slideIn3()" onmouseout="slideOut3()" src="/img/new-baner/VetviFlowers-cover.png" alt="VetviFlowers_cover" >
+		</a>
+</div>
+
+
+
+
+ 
+ </body> 
+
+</html>
