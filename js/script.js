@@ -88,7 +88,7 @@ gltfLoader.load(
     // {
     //     scene.add(child)
     // }
-    gltf.scene.scale.set(0.06,0.06,0.06);
+    gltf.scene.scale.set(0.04,0.04,0.04);
     gltf.scene.rotation.y = Math.PI * 0.25;
     gltf.scene.position.y = -0.25;
 
@@ -149,7 +149,7 @@ scene.add(camera);
 const controls = new OrbitControls(camera, canvas);
 controls.target.set(0, 0.75, 0);
 controls.enableDamping = true;
-controls.enableZoom = false;
+controls.enableZoom = true;
 
 /**
  * Renderer
