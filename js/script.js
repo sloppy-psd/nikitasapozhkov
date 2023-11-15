@@ -79,7 +79,7 @@ scene.background = environmentMap;
 
 const gltfLoader = new GLTFLoader();
 gltfLoader.load(
-    '../static/models/Tag/Traffic Cone-tex2048.usdz',
+    '../static/models/Tag/Traffic20Cone-tex2048.glb',
     // '/models/Duck/glTF/Duck.gltf',
     (gltf) =>
     {
