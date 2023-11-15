@@ -79,7 +79,7 @@ scene.background = environmentMap;
 
 const gltfLoader = new GLTFLoader();
 gltfLoader.load(
-    '../static/models/Tag/Traffic20Cone-tex2048.glb',
+    '../static/models/Tag/breaks-destroed-web_simple_01.glb',
     // '/models/Duck/glTF/Duck.gltf',
     (gltf) =>
     {
@@ -88,7 +88,7 @@ gltfLoader.load(
     // {
     //     scene.add(child)
     // }
-    gltf.scene.scale.set(0.04,0.04,0.04);
+    gltf.scene.scale.set(0.06,0.06,0.06);
     gltf.scene.rotation.y = Math.PI * 0.25;
     gltf.scene.position.y = -0.25;
 
@@ -149,7 +149,7 @@ scene.add(camera);
 const controls = new OrbitControls(camera, canvas);
 controls.target.set(0, 0.75, 0);
 controls.enableDamping = true;
-controls.enableZoom = true;
+controls.enableZoom = false;
 
 /**
  * Renderer
