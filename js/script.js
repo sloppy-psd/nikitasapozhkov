@@ -79,7 +79,7 @@ scene.background = environmentMap;
 
 const gltfLoader = new GLTFLoader();
 gltfLoader.load(
-    '../static/models/Tag/breaks-destroed-web_simple_01.glb',
+    '../static/models/Tag/Traffic Cone-tex2048.usdz',
     // '/models/Duck/glTF/Duck.gltf',
     (gltf) =>
     {
