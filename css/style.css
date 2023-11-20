@@ -1,17 +1,22 @@
 
 
 body{
-background-color: #E1E1E1;
+/*background-color: #E1E1E1;*/
  max-width: 100%;
 overflow-x: hidden;
-
+margin-left: 0px;
+margin-right: 0px;
 /*margin-left: 20px;
 margin-right: 20px;*/
 /*-webkit-font-smoothing: antialiased;*/
 }
 
 .ab {
-background-color: #008B4B;
+/*background-color: #008B4B;*/
+background-color: #white;
+
+margin-left: 0;
+margin-right: 0;
 }
 
 @font-face {
@@ -24,6 +29,11 @@ background-color: #008B4B;
 @font-face {
   font-family: "CoFoSans";
   src: url("./fonts/Holz_mono_short_autohint_20210902.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AlhGrotesque";
+  src: url("./fonts/NeuGrotesk-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -41,10 +51,10 @@ background-color: #008B4B;
   position: fixed;
   z-index: 900;
   overflow: hidden;
-  background-color: #E1E1E1;
-  /*background-color: white;*/
+/*  background-color: #E1E1E1;*/
+  background-color: white;
   box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.18);
-
+box-sizing: content-box;
   margin: 0;
   padding: 0;
   top: 0;
@@ -56,17 +66,17 @@ padding-right: 15px;
 padding-top: 15px;
 padding-bottom: 10px;
 width: 100%;
-border-bottom: black 0.5px solid;
+/*border-bottom: black 0.5px solid;*/
 /*border-radius: 0px 0px 15px 15px;*/
 }
 
 .sapozhkov {
   display: inline-block;
-font-size: 20px;
-font-family: HolzMono, Times;
+font-size: 21px;
+font-family: AlhGrotesque, Times;
 font-weight: normal;
-line-height: 20px;
-min-width: 250px;
+line-height: 21px;
+min-width: 200px;
 /*  border-radius: 15px;
   background-color:#008B4B;
 padding-right: 10px;
@@ -80,25 +90,75 @@ color: black;
 background-color: none;
 text-decoration: none;
 vertical-align: baseline;
+letter-spacing: 1px;
 }
 @media screen and (max-width: 811px) {
 .sapozhkov {
-line-height: 17px;
+line-height: 21px;
 }
 .sapozhkov  a {
-font-size: 17px;
+font-size: 21px;
 /*font-weight: bold;*/
 }
 }
 @media screen and (max-width: 640px) {
 .sapozhkov {
-line-height: 15px;
+line-height: 17px;
+
 }
 .sapozhkov  a {
-font-size: 15px;
+font-size: 19px;
 /*font-weight: bold;*/
 }
 }
+
+
+/*HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS */
+.buttons-menu {
+  display: inline-block;
+font-size: 21px;
+font-family: AlhGrotesque, Times;
+font-weight: normal;
+line-height: 21px;
+/*min-width: 230px;*/
+/*  border-radius: 15px;
+  background-color:#008B4B;
+padding-right: 10px;
+padding-top: 10px;
+padding-bottom: 5px;
+padding-left: 10px;*/
+text-transform: uppercase;
+}
+.buttons-menu  a {
+color: black;
+background-color: none;
+text-decoration: none;
+vertical-align: baseline;
+letter-spacing: 1px;
+}
+
+.buttons-menu  a:hover{
+color: blue;
+background-color: none;
+text-decoration: none;
+vertical-align: baseline;
+}
+
+@media screen and (max-width: 640px) {
+.buttons-menu {
+line-height: 17px;
+}
+.buttons-menu  a {
+font-size: 19px;
+/*font-weight: bold;*/
+}
+}
+
+/*HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS */
+
+
+
+
 
 
 .navigation {
@@ -349,7 +409,7 @@ max-width: 50%;
 .news{
   display: flex;
   cursor: pointer;
-box-shadow:  0px 0px 15px black;
+box-shadow:  0px 0px 10px rgba(1, 1, 1, 0.3);
   border: 0px; 
   margin-left: 5px;
   margin-right: 5px;
@@ -365,9 +425,11 @@ box-shadow:  0px 0px 15px black;
 }
 
 .news:hover{
-box-shadow:  0px 0px 15px black;
-background-color: #008B4B;
-color: black;
+box-shadow:  0px 0px 10px rgba(1, 1, 1, 0.3);
+/*background-color: #008B4B;*/
+background-color: blue;
+color: white;
+
 }
 
 
@@ -428,7 +490,7 @@ box-shadow:  0px 0px 15px black;
   /*margin-right: 5px;*/
   margin-top: 3px;
   border-radius: 100%;
-  background-color: red;
+  background-color: blue;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 0px;
@@ -448,7 +510,6 @@ justify-content: center;
       transition: width 0.7s ease-in-out, height 0.7s ease-in-out, border-radius 0.5s ease-in-out;
 margin-left: 15px;
   margin-right: 5px;
-  color: black;
 
 }
 
@@ -466,7 +527,7 @@ text-transform: uppercase;
 opacity: 0;
 transition: opacity 0.2s ease-in-out;
 overflow: hidden;
-color: black;
+color: white;
 }
 @media screen and (max-width: 811px) {
   
@@ -686,7 +747,8 @@ margin:0;
 
 .projects-list h1:hover {
   border-radius: 15px;
-  background-color:white;
+  background-color:blue;
+  color: white;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 15px;
@@ -766,6 +828,176 @@ color: #008B4B;
 
 
 
+/*Background to the main box with all content*/
+.about_back{
+  position: relative;
+  z-index: 2;
+
+/*  background: #008B4B;*/
+    background: white;
+
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 350px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/*Background to the main box with all content*/
+
+
+
+/*FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 */
+
+.foot{
+
+  position: fixed;
+/*display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;*/
+
+  bottom: 0;
+  width: 100%;
+  height: 350px;  
+  
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  background-color: black;
+}
+
+
+
+
+
+
+
+.footer-info { 
+display: flex;
+align-items: stretch;
+margin: 0;
+width: 100%;
+}
+
+
+
+.footer-info h1{ 
+  width: 100%;
+  font-family: AlhGrotesque;
+  color: white;
+  font-size: 21px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-right: 20px;
+  line-height: 22px;
+  padding-left: 15px;
+ }
+
+@media screen and (max-width: 811px) {
+  .footer-info h1{ 
+  font-size: 19px;
+  letter-spacing: 1px;
+  line-height: 17px;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+
+
+.footer-info{
+    display: block;
+width: 100%;
+/*float: left;*/
+
+
+}
+
+
+.footer-info h1{
+  text-align: center;
+  font-size: 15px;  
+padding: 0px;
+margin: 0px;
+margin-top: 15px;
+/*background-color: greenyellow;*/
+}
+
+}
+
+
+
+.btn-default {
+  margin-top: 15px;
+  margin-right: 20px;
+  border-radius: 40px;
+  padding: 20px;
+  padding-bottom: 20px;
+  height: auto;   
+  background: white;
+  color: black;
+  font-family: AlhGrotesque;
+  font-size: 21px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+}
+
+
+button:hover{
+  cursor: pointer;
+  color: white;
+  background: blue;
+
+}
+
+@media screen and (max-width: 811px) {
+  .btn-default  { 
+  font-size: 19px;
+  letter-spacing: 1px;
+  line-height: 17px;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+.btn-default  { 
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 17px;
+  padding: 15px;
+  padding-bottom: 15px;
+  }
+
+}
+
+
+/*NIKITA SAPOZHKOV LETTERING ON FOOTER*/
+
+ .ns-lettering{
+display: block;
+  margin-top: 20px;
+margin-bottom: 10px;
+  width: 100%;
+}
+
+/*NIKITA SAPOZHKOV LETTERING ON FOOTER*/
+
+
+/*FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 */
+
+
+.social > a { 
+  display: block;
+  margin-right: 40px;
+ }
+
+.social > a:hover { 
+color: #008B4B;
+ }
+
+
 /*THREE JS SCRIPT CANVAS STYLE*/
 
 .canvas{
@@ -775,7 +1007,7 @@ width: 100%;
 height: 100%;
   margin: 0;
   top: 35px;
-  margin-left: -10px;
+/*  margin-left: -10px;*/
 /*margin-right: -10px;*/
 /*background-color: blue;*/
   /*margin-left: 5px;*/
@@ -811,7 +1043,9 @@ outline: none;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 15px;
-  background-color:black;
+  background-color:blue;
+/*  background-color:#f7f7f7;*/
+
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -845,31 +1079,45 @@ font-size: 17px;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 15px;
-  background-color:black;
+/*  background-color: #f7f7f7;*/
+  background-color: blue;
+
   padding-top: 25px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 .contact-info h1 {
-/*width: 50%;*/
-font-family: HolzMono, Times;
+width: 50%;
+font-family: AlhGrotesque, Times;
+letter-spacing: 2px;
 font-weight: normal;
 font-size: 20px;
 text-align: left;
 text-transform: uppercase;
-color: white;
+color: black;
+border-radius: 10px;
+background-color: white;
+padding: 10px;
 
 /*color: #008B4B;*/
  padding-left: 10px;
- /*margin-right: 20px;*/
+ padding-bottom: 10px;
+ margin-right: 10px;
  min-width: 20%;
+ margin-bottom: 10px;
+ margin-top: 10px;
 }
 @media screen and (max-width: 811px) {
 
 .contact-info h1{
-font-size: 12px;
-font-weight: bold;
+  display: block;
+  width: 100%;
+margin-right: 0px;
+ margin-bottom: 0px;
+
+font-size: 15px;
+font-weight: normal;
 }
 }
 
@@ -879,13 +1127,26 @@ font-weight: bold;
 .ALH-logo{
 display: flex;
 
-  margin-top: 20px;
+  margin-top: 10px;
   width: auto;
-  height: 80%;
-padding-right: 10px;
-margin-bottom: 20px;
-max-width: 40%;
+  height: 60%;
+padding: 10px;
+margin-bottom: 10px;
+max-width: 25%;
+background-color: white;
+border-radius: 10px;
 }
+@media screen and (max-width: 811px) {
+
+.ALH-logo{
+  width: 50%;
+max-width: 50%;
+  padding: 5px;
+
+}
+
+}
+
 
 .social-media{
 display: flex;
@@ -918,7 +1179,8 @@ font-size: 21px;
 
 
 .social-media a:hover {
-color: white;
+/*color: white;*/
+color: red;
 }
 
 
@@ -976,7 +1238,8 @@ text-align: center;
 
  .selected-clients h1:hover {
 border-radius: 15px;
-  background-color:white;
+/*  background-color:white;*/
+  background-color:#f7f7f7;
  }
 /*SELECTED CLIENTS*/
 
@@ -1012,7 +1275,7 @@ margin: 0;
 .two-column h1{
 width: 100%;
 font-size: 12px;
-font-weight: bold;
+font-weight: normal;
 /*margin-top: 20px;
 margin-bottom: 5px;*/
  }
@@ -1020,8 +1283,18 @@ margin-bottom: 5px;*/
 
  .two-column h1:hover {
 border-radius: 15px;
-  background-color:white;
+/*  background-color:white;*/
+    background-color:#f7f7f7;
+
  }
+
+
+/*  .two-column1 h1:hover {
+border-radius: 15px;
+  background-color:rgba(0, 0, 0, 0.05);
+ }
+*/
+
 
 .line-hidden{
   display: none;
@@ -1102,10 +1375,10 @@ flex-wrap: wrap;
 .types {
 flex-wrap: wrap;
 
-font-family: HolzMono, Arial;
+font-family: AlhGrotesque, Arial;
+letter-spacing: 1px;
 font-weight: normal;
 font-size: 15px;
-/*text-transform: uppercase;*/
 color: black;
 width: 50%;
 min-width: 30%;

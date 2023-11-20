@@ -21,46 +21,21 @@
 }
 
 window.addEventListener("scroll", scrollEventHandler, false);</script>
-    <!-- HEADER -->
+    
+
+ <!-- HEADER -->
     <nav class="header">
         <div class="sapozhkov">
-            <a href="index.html">Nikita Sapozhkov <br> graphic & type design</a>
+            <a href="index.html">Nikita Sapozhkov <br> graphic & type designer</a>
         </div>
-        <div class="buttons">
-            <button onclick="document.location='projects.html'" class="icon-btn add-btn">
-                <div class="btn-txt">Projects</div>
-            </button>
-            <button onclick="document.location='about.html'" class="icon-btn add-btn2">
-                <div class="btn-txt">About</div>
-            </button>
+        <div class="buttons-menu">
+            <a href="projects.html">Projects</a> <br> <a href="about.html">About</a> 
         </div>
-        <!-- HEADER -->
-        <!-- VARIABLE TAG -->
-        <div class="my-variable-text" id="VAR">C</div>
-        <script>
-            function randomizeText() {
-  var w = window.innerWidth;
-   // randomWidth = Math.random() * (200 - 100) + 100;
-  document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/9;
-if (w<=1025) {
-      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/10;
-  }
-  if (w<=985) {
-      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/12;
-  }
-  if (w<=825) {
-      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/4.9;
-  }
-   if (w<=811) {
-      document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w/4.9;
-  }
-}
-setInterval(randomizeText, 1);
 
-</script>
-        <!-- VARIABLE TAG -->
     </nav>
     <!-- HEADER -->
+
+
     <!-- MAIN -->
     <div class="news-block">
         <button class="news" onmouseover="slideIn()" onmouseout="slideOut()" onclick="document.location='asics_silver_pack.html'">
@@ -113,7 +88,8 @@ setInterval(randomizeText, 1);
     <!-- BACKGROUND MAIN INFO -->
     <div class="back-info">
         <button class="main-back" onmouseover="myFunction1()" onmouseout="myFunction2()">
-            <h1 id="showInfo">this 3D sculpture created at 2021.11.01 by Georgii Sapozhkov and textured by me.</h1>
+            <h1 id="showInfo">Traffic Cone — 01<br>
+The Traffic Cones is a series of objects that tell us about our inner frames, possibilities, and personal space. It is a symbol of the flexibility of boundaries which show us limitations that exist only within ourselves.<br><br>Check in Augment Reality in Slot app</h1>
         </button>
     </div>
     <script>

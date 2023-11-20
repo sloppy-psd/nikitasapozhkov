@@ -15,45 +15,23 @@
 </head>
 
 <body>
-    <!-- HEADER -->
+    
+<!-- HEADER -->
     <nav class="header">
         <div class="sapozhkov">
-            <a href="index.html">Nikita Sapozhkov <br> graphic & type design</a>
+            <a href="index.html">Nikita Sapozhkov <br> graphic & type designer</a>
         </div>
-        <div class="buttons">
-            <button onclick="document.location='projects.html'" class="icon-btn add-btn">
-                <div class="btn-txt">Projects</div>
-            </button>
-            <button onclick="document.location='about.html'" class="icon-btn add-btn2">
-                <div class="btn-txt">About</div>
-            </button>
+        <div class="buttons-menu">
+            <a href="projects.html">Projects</a> <br> <a href="about.html">About</a> 
         </div>
-        <!-- VARIABLE TAG -->
-        <div class="my-variable-text" id="VAR">C</div>
-        <script>
-        function randomizeText() {
-            var w = window.innerWidth;
-            // randomWidth = Math.random() * (200 - 100) + 100;
-            document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w / 9;
-            if (w <= 1025) {
-                document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w / 10;
-            }
-            if (w <= 985) {
-                document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w / 12;
-            }
-            if (w <= 825) {
-                document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w / 4.9;
-            }
-            if (w <= 811) {
-                document.getElementById("VAR").style.fontVariationSettings = " \"wdth\" " + w / 4.9;
-            }
-        }
-        setInterval(randomizeText, 1);
-        </script>
-        <!-- VARIABLE TAG -->
+
     </nav>
     <!-- HEADER -->
+
+
+
     <!-- PROJECTS LIST-->
+     <section class="about_back">
     <div class="projects-list">
         <a href="projects_sb_streetball.html">
             <h1>Streetball XXL</h1>
@@ -104,10 +82,18 @@
         </a>
         <div class="divider"></div>
     </div>
+</section>
     <!-- PROJECTS LIST-->
     <!-- FOOTER -->
-    <footer class="footer">
-        <div>© 2023, Nikita Sapozhkov. All rights reserved.<br>Any Letters Here - Alh</div>
+    <footer class="foot">
+        <img class="ns-lettering" src="img/ns-lettering.svg">
+           
+    <div class="footer-info">
+        <h1 style="flex-grow: 1">2023, Nikita Sapozhkov<br>Any Letters Here, Alh</h1>
+        <h1 style="flex-grow: 1">For collaboration and commissioned work don’t hesitate to write: <br>
+            <button  class="btn-default">Nikita.sapozhkov.alh@gmail.com</button></h1>
+    </div>
+
     </footer>
     <!-- FOOTER -->
 </body>

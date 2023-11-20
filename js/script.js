@@ -31,7 +31,6 @@ const canvas = document.querySelector('#c');
 // Scene
 const scene = new THREE.Scene();
 
-  scene.background = new THREE.Color(0x008B4B);
 
 /**
  * UPDATES ALL MATERIALS
@@ -43,7 +42,7 @@ const updateAllMaterials = () =>
         if ( child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial)
         {
           child.material.envMap = environmentMap;
-          child.material.envMapIntensity = 2;
+          child.material.envMapIntensity = 7;
 
         }
 console.log(child);
@@ -58,18 +57,32 @@ console.log(child);
 const environmentMap = cubeTextureLoader.load(
 
     [
-        '../static/textures/environmentMaps/1/px.jpg',
-        '../static/textures/environmentMaps/1/nx.jpg',
-        '../static/textures/environmentMaps/1/py.jpg',
-        '../static/textures/environmentMaps/1/ny.jpg',
-        '../static/textures/environmentMaps/1/pz.jpg',
-        '../static/textures/environmentMaps/1/nz.jpg',
+        '../static/textures/environmentMaps/2/px.png',
+        '../static/textures/environmentMaps/2/nx.png',
+        '../static/textures/environmentMaps/2/py.png',
+        '../static/textures/environmentMaps/2/ny.png',
+        '../static/textures/environmentMaps/2/pz.png',
+        '../static/textures/environmentMaps/2/nz.png',
 
 
     ]
 );
-scene.background = environmentMap;
-  // scene.background = new THREE.Color(0x008B4B);
+// scene.background = environmentMap;
+
+  // scene.background = new THREE.Color(0x000000);
+
+  const near = 2;
+  const far = 6;
+  // const color = '#ededed';
+    const color = '#00ff00';
+  scene.fog = new THREE.Fog(color, near, far);
+  scene.background = new THREE.Color(color);
+
+// scene.background = new THREE.Color('black');
+
+/**
+ * ENVIRONMENT MAP
+ */
 
 
 /**
@@ -79,18 +92,12 @@ scene.background = environmentMap;
 
 const gltfLoader = new GLTFLoader();
 gltfLoader.load(
-    '../static/models/Tag/breaks-destroed-web_simple_01.glb',
-    // '/models/Duck/glTF/Duck.gltf',
-    (gltf) =>
-    {
-    // const children = [...gltf.scene.children]
-    // for(const child of children)
-    // {
-    //     scene.add(child)
-    // }
-    gltf.scene.scale.set(0.06,0.06,0.06);
+    '../static/models/Tag/Traffic-tex2048.glb',
+    (gltf) => {
+ 
+    gltf.scene.scale.set(0.009,0.009,0.009);
     gltf.scene.rotation.y = Math.PI * 0.25;
-    gltf.scene.position.y = -0.25;
+    gltf.scene.position.y = -0.45;
 
     scene.add(gltf.scene);
 
