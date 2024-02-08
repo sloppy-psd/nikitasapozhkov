@@ -21,10 +21,13 @@
 }
 
 window.addEventListener("scroll", scrollEventHandler, false);</script>
+
+
+
     
 
  <!-- HEADER -->
-    <nav class="header">
+<!--     <nav class="header">
         <div class="sapozhkov">
             <a href="index.html">Nikita Sapozhkov <br> graphic & type designer</a>
         </div>
@@ -32,22 +35,89 @@ window.addEventListener("scroll", scrollEventHandler, false);</script>
             <a href="projects.html">Projects</a> <br> <a href="about.html">About</a> 
         </div>
 
-    </nav>
+    </nav> -->
     <!-- HEADER -->
 
 
+
+    <!-- HEADER 2 -->
+
+
+<nav class="header2">
+        <div class="header_name_menu">
+            <a href="index.html">Nikita Sapozhkov <br> graphic & type designer</a>
+        </div>
+        <div class="header_buttons_menu">
+            <a href="projects.html">Projects</a> <br> <a href="about.html">About</a> 
+        </div>
+        
+
+        <div class="header_project_name">
+            <a style="color:rgba(255, 255, 255, 0.01) ;">Traffic</a>
+        </div>
+
+
+
+<!-- DESCRIPTION AND TAGS IN HEADER -->
+              <script src="js/script_description.js"></script>
+
+        <div id="toggleContentButton" onclick="toggleContent()">↑
+</div>
+
+
+  <div id="contentBlock">
+<div class="projects_description" id="descriptionBlock">
+            <a>Experienced type and graphic designer specializing in type development and innovative visual solutions for brands, projects, individuals, and cultural institutions.</a>
+        </div>
+
+<div class="projects_tag" id="tagBlock">
+            <!-- <a>Instagram • Tumblr • Linkedin</a><br> -->
+             <button class="news2" onmouseover="slideIn3()" onmouseout="slideOut3()" onclick="document.location='projects_vetvi.html'">
+            <h1>Vetvi Flowers</h1>
+        </button>
+ <button class="news2" onmouseover="slideIn()" onmouseout="slideOut()" onclick="document.location='asics_silver_pack.html'">
+            <h1>Asics silver pack</h1>
+        </button>
+        <button class="news2" onmouseover="slideIn2()" onmouseout="slideOut2()" onclick="document.location='projects_sb_streetball.html'">
+            <h1>Basketball XXl</h1>
+        </button>
+
+
+        </div>  
+    </div>
+
+<!-- DESCRIPTION AND TAGS IN HEADER -->
+
+
+    </nav>
+
+
+<!-- HEADER 2 — END -->
+
+
+
+
+
+
     <!-- MAIN -->
-    <div class="news-block">
+
+                    <!-- PROJECTS BUTTONS ON THE 3-JS CANVAS   -->
+
+ <!--    <div class="news-block">
+           <button class="news" onmouseover="slideIn3()" onmouseout="slideOut3()" onclick="document.location='projects_vetvi.html'">
+            <h1>Vetvi Flowers</h1>
+        </button>
         <button class="news" onmouseover="slideIn()" onmouseout="slideOut()" onclick="document.location='asics_silver_pack.html'">
             <h1>Asics silver pack</h1>
         </button>
         <button class="news" onmouseover="slideIn2()" onmouseout="slideOut2()" onclick="document.location='projects_sb_streetball.html'">
             <h1>Basketball XXl</h1>
         </button>
-        <button class="news" onmouseover="slideIn3()" onmouseout="slideOut3()" onclick="document.location='projects_vetvi.html'">
-            <h1>Vetvi Flowers</h1>
-        </button>
-    </div>
+     
+    </div> -->
+
+                    <!-- PROJECTS BUTTONS ON THE 3-JS CANVAS   -->
+
     <script>
         function slideIn() {
   var newsImg_1 = document.getElementById("asicsSP");
@@ -116,14 +186,15 @@ The Traffic Cones is a series of objects that tell us about our inner frames, po
     <!-- THREE JS SCENE -->
     <!-- PROJECTS ---------------LOAD PROJECTS HERE, JUST COPY CODE-->
     <div class="projects-new">
+          <a href="projects_vetvi.html">
+                <img class="project_img" id="vetvi" onmouseover="slideIn3()" onmouseout="slideOut3()" src="img/new-baner/VetviFlowers-cover.png" alt="VetviFlowers_cover">
+            </a>
         <a href="asics_silver_pack.html">
             <img class="project_img" id="asicsSP" onmouseover="slideIn()" onmouseout="slideOut()" src="img/new-baner/AsicsSilverPack-cover.png" alt="silverpack">
         </a>
         <a href="projects_sb_streetball.html">
-            <img class="project_img" id="sbBXXL" onmouseover="slideIn2()" onmouseout="slideOut2()" src="img/new-baner/StreetXXL-cover.png" alt="silverpack">
-            <a href="projects_vetvi.html">
-                <img class="project_img" id="vetvi" onmouseover="slideIn3()" onmouseout="slideOut3()" src="img/new-baner/VetviFlowers-cover.png" alt="VetviFlowers_cover">
-            </a>
+            <img class="project_img" id="sbBXXL" onmouseover="slideIn2()" onmouseout="slideOut2()" src="img/new-baner/StreetXXL-cover.png" alt="silverpack"></a>
+          
     </div>
 </body>
 

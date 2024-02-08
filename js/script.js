@@ -74,7 +74,9 @@ const environmentMap = cubeTextureLoader.load(
   const near = 2;
   const far = 6;
   // const color = '#ededed';
-    const color = '#00ff00';
+    // const color = '#00ff00';
+      const color = '#F5F5F5';
+
   scene.fog = new THREE.Fog(color, near, far);
   scene.background = new THREE.Color(color);
 

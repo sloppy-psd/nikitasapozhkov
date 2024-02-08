@@ -23,7 +23,7 @@ function initCarouselContainer( container ) {
 
   function updateStatus() {
     var slideNumber = flkty.selectedIndex + 1;
-    carouselStatus.textContent = slideNumber + '–' + flkty.slides.length;
+    carouselStatus.textContent = slideNumber + ' – ' + flkty.slides.length;
   }
   updateStatus();
   

@@ -8,6 +8,12 @@ body {
     font-family: sans-serif;
 
   /*background-color: gold;*/
+
+}
+
+@font-face {
+  font-family: "AlhGrotesque";
+  src: url("./fonts/NeuGrotesk-Regular.woff2") format("woff2");
 }
 
   .no-carousel{
@@ -71,10 +77,11 @@ width:50%;
   padding: 0;
   margin-right: 5px;
   margin-left: 5px;
+  margin-top: 50px;
   /*width: 100%;*/
   /*top: 10px;*/
   /*bottom: 220px;*/
-  margin-bottom: 0px;
+  margin-bottom: 50px;
       justify-content: center;
   /*background: green;*/
 
@@ -88,7 +95,7 @@ width:50%;
  padding: 0;
 /*align-items: center;*/
   text-align: center;
-  font-family: CoFoSans, Arial;
+  font-family: AlhGrotesque, Arial;
 font-weight: normal;
 font-size: 15px;
 color: black;
