@@ -286,7 +286,7 @@ font-family: AlhGrotesque, Times;
 font-weight: normal;
 line-height: 18px;
 min-width: 200px;
-/*text-transform: uppercase;*/
+text-transform: uppercase;
 margin-right: 90px;
 /*letter-spacing: 1px;*/
 letter-spacing: 0.03em;
@@ -444,6 +444,21 @@ video {
 }
 
 /*VIDEO CONTAINER*/
+
+
+.fullWidth_img_box {
+    width: 100vw;
+height: auto;
+margin: 0px;
+}
+
+.fullWidth_img_box img{
+    display: block;
+
+width: 100%;
+  height: auto;
+}
+
 
 /*HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS */
 .buttons-menu {
