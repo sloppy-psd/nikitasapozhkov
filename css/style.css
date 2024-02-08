@@ -459,6 +459,13 @@ width: 100%;
   height: auto;
 }
 
+@media screen and (max-width: 640px) {
+.fullWidth_img_box {
+margin-top: 39px;
+}
+
+}
+
 
 /*HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS HEADER BUTTONS */
 .buttons-menu {
