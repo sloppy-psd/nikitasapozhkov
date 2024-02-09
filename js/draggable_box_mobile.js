@@ -70,5 +70,5 @@ hideButton2.addEventListener('touchend', (e) => {
 img_main_page.addEventListener('touchend', (e) => {
   e.preventDefault();
   // Assuming there is a function handleButtonClick defined somewhere
-  handleButtonClick('projects_vetvi.html');
+  handleButtonClick('project_ClanSix.html');
 });
