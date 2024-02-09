@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "AlhGrotesque";
+  src: url("./fonts/NeuGrotesk-Regular.woff2") format("woff2");
+}
+ /*.draggableContainer {
+      position: relative;
+    }*/
+
+
+   #draggableBox1 {
+      top: 10%;
+      left: 5%;
+   width: 25%;
+  min-width: 300px;
+  background: rgba(176,140,14,0.75);
+/* background: rgba(212,153,0,0.65);*/
+
+/*background: rgba(255,255,255,0.4);*/
+backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+    }
+
+    #draggableBox2 {
+   top: 22%;
+  left: 15%;
+      width: 25%;
+      min-width: 300px;
+background: rgba(255,255,255,0.4);
+backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+    }
+
+
+.draggableBox {
+
+position: absolute;
+display: block;
+cursor: move;
+border-radius: 15px;
+margin-right: 0px;
+
+font-size: 17px;
+font-family: AlhGrotesque, Times;
+text-transform: uppercase;
+letter-spacing: 1px;
+
+}
+
+
+@media screen and (max-width: 640px) {
+.draggableBox {
+  font-size: 13px;
+
+}
+}
+
+
+
+#img_main_page {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.textMessage {
+/*  padding: 10px;*/
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.hideButton {
+  width: 50%;
+  cursor: pointer;
+  background: none;
+  color: black;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+/*  border: 1px solid #ccc;*/
+/*  border-radius: 35px;*/
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  background: white;
+  color: black;
+  border-radius: 35px;
+}
+
+.hideButton:hover{
+  background: black;
+  color: white;
+  border-radius: 35px;
+}
+
+

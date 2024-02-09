@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nikita Sapozhkov</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/draggable_box.css">
+
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -59,7 +61,7 @@ window.addEventListener("scroll", scrollEventHandler, false);</script>
 
 
 <!-- DESCRIPTION AND TAGS IN HEADER -->
-              <script src="js/script_description.js"></script>
+   <!--            <script src="js/script_description.js"></script>
 
         <div id="toggleContentButton" onclick="toggleContent()">↑
 </div>
@@ -70,21 +72,17 @@ window.addEventListener("scroll", scrollEventHandler, false);</script>
             <a>Experienced type and graphic designer specializing in type development and innovative visual solutions for brands, projects, individuals, and cultural institutions.</a>
         </div>
 
-<div class="projects_tag" id="tagBlock">
+<div class="projects_tag" id="tagBlock"> -->
             <!-- <a>Instagram • Tumblr • Linkedin</a><br> -->
-             <button class="news2" onmouseover="slideIn3()" onmouseout="slideOut3()" onclick="document.location='projects_vetvi.html'">
+   <!--           <button class="news2" onmouseover="slideIn3()" onmouseout="slideOut3()" onclick="document.location='projects_vetvi.html'">
             <h1>Vetvi Flowers</h1>
         </button>
  <button class="news2" onmouseover="slideIn()" onmouseout="slideOut()" onclick="document.location='project_ClanSix.html'">
             <h1>Clan Six</h1>
         </button>
-       <!--  <button class="news2" onmouseover="slideIn2()" onmouseout="slideOut2()" onclick="document.location='projects_sb_streetball.html'">
-            <h1>Basketball XXl</h1>
-        </button> -->
-
-
+     
         </div>  
-    </div>
+    </div> -->
 
 <!-- DESCRIPTION AND TAGS IN HEADER -->
 
@@ -196,6 +194,47 @@ The Traffic Cones is a series of objects that tell us about our inner frames, po
             <img class="project_img" id="sbBXXL" onmouseover="slideIn2()" onmouseout="slideOut2()" src="img/new-baner/StreetXXL-cover.png" alt="silverpack"></a>
           
     </div> -->
+
+
+
+
+
+<!-- DRAGGABLE BOX ON THE MAIN PAGE -->
+<!-- <div id="draggableBox">
+    <div id="hideButton" onclick="toggleSize()">About ↑</div>
+
+  <div id="textMessage">
+    <p>Nikita Sapozhkov is an experienced type and graphic designer specializing in type development and innovative visual solutions for brands, projects, individuals, and cultural institutions.</p>
+  </div>
+</div>
+ -->
+
+<div class="draggableContainer">
+    <div id="draggableBox1" class="draggableBox" onmousedown="startDrag(event, 'draggableBox1')">
+      <div id="hideButton1" class="hideButton" onclick="toggleSize('textMessage1', 'draggableBox1')">About</div>
+      <div id="textMessage1" class="textMessage">
+        <p>Nikita Sapozhkov is an experienced type and graphic designer specializing in type development and innovative visual solutions for brands, projects, individuals, and cultural institutions.</p>
+      </div>
+    </div>
+
+    <div id="draggableBox2" class="draggableBox" onmousedown="startDrag(event, 'draggableBox2')">
+      <div id="hideButton2" class="hideButton" onclick="toggleSize('textMessage2', 'draggableBox2')">New case</div>
+      <div id="textMessage2" class="textMessage">
+        <!-- <p>Second Draggable Box Content</p> -->
+                <a href="projects_vetvi.html"><img  id="img_main_page" src="img/clansix/ns_clansix_main_00.png" alt="ns_clansix_main_00"></a>
+
+      </div>
+    </div>
+  </div>
+
+ 
+<script src="js/draggable_box.js"></script>
+
+<!-- DRAGGABLE BOX ON THE MAIN PAGE -->
+
+
+
+
 </body>
 
 </html>
