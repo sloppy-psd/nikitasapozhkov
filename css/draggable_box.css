@@ -31,6 +31,15 @@ backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
     }
 
+@media screen and (max-width: 640px) {
+#draggableBox2 {
+  font-size: 13px;
+  min-width: 250px;
+
+}
+}
+
+
 
 .draggableBox {
 
