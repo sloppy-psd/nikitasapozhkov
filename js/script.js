@@ -42,7 +42,7 @@ const updateAllMaterials = () =>
         if ( child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial)
         {
           child.material.envMap = environmentMap;
-          child.material.envMapIntensity = 7;
+          child.material.envMapIntensity = 2;
 
         }
 console.log(child);
@@ -57,12 +57,12 @@ console.log(child);
 const environmentMap = cubeTextureLoader.load(
 
     [
-        '../static/textures/environmentMaps/2/px.png',
-        '../static/textures/environmentMaps/2/nx.png',
-        '../static/textures/environmentMaps/2/py.png',
-        '../static/textures/environmentMaps/2/ny.png',
-        '../static/textures/environmentMaps/2/pz.png',
-        '../static/textures/environmentMaps/2/nz.png',
+        '../static/textures/environmentMaps/3/px.png',
+        '../static/textures/environmentMaps/3/nx.png',
+        '../static/textures/environmentMaps/3/py.png',
+        '../static/textures/environmentMaps/3/ny.png',
+        '../static/textures/environmentMaps/3/pz.png',
+        '../static/textures/environmentMaps/3/nz.png',
 
 
     ]
@@ -94,12 +94,12 @@ const environmentMap = cubeTextureLoader.load(
 
 const gltfLoader = new GLTFLoader();
 gltfLoader.load(
-    '../static/models/Tag/Traffic-tex2048.glb',
+    '../static/models/Tag/Holz3D.glb',
     (gltf) => {
  
     gltf.scene.scale.set(0.009,0.009,0.009);
     gltf.scene.rotation.y = Math.PI * 0.25;
-    gltf.scene.position.y = -0.45;
+    gltf.scene.position.y = 0.45;
 
     scene.add(gltf.scene);
 
@@ -114,11 +114,11 @@ gltfLoader.load(
  * Lights
  */
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
-// scene.add(ambientLight)
+scene.add(ambientLight);
 
 const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
 
-directionalLight.position.set(0, 1, 0);
+directionalLight.position.set(1, 2, 0);
 
 scene.add(directionalLight);
 
