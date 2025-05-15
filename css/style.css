@@ -42,12 +42,12 @@ margin-right: 0;
 
 @font-face {
   font-family: "AlhGrotesque";
-  src: url("./fonts/AlhAisleBetav0.3-Regular.woff2") format("woff2");
+  src: url("./fonts/NeuGrotesk-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "AlhGrotesque-Medium";
-  src: url("./fonts/AlhAisleBetav0.3-Regular.woff2") format("woff2");
+  src: url("./fonts/NeuGrotesk-Medium.woff2") format("woff2");
 }
 
 @font-face {
