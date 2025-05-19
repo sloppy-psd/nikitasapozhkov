@@ -1,6 +1,6 @@
 @font-face {
   font-family: "AlhGrotesque";
-  src: url("./fonts/NeuGrotesk-Regular.woff2") format("woff2");
+  src: url("./fonts/AlhAisleBetav0.3-Regular.woff2") format("woff2");
 }
  /*.draggableContainer {
       position: relative;
@@ -49,7 +49,7 @@ cursor: move;
 border-radius: 15px;
 margin-right: 0px;
 
-font-size: 17px;
+font-size: 13px;
 font-family: AlhGrotesque, Times;
 text-transform: uppercase;
 letter-spacing: 1px;

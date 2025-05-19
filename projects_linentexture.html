@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- MAIN STYLE CSS -->
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
+    <link rel="manifest" href="site.webmanifest?v=1">
     <!-- FAVICON -->
     <!-- FLICKITY -->
     <link rel="stylesheet" type="text/css" href="/flickity-style.css">
@@ -22,7 +22,15 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
     <!-- FLICKITY -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8H40FY6868"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-8H40FY6868');
+</script>
 </head>
 
 <body>
@@ -57,7 +65,7 @@
 
   <div id="contentBlock">
 <div class="projects_description" id="descriptionBlock">
-            <a>Vetvi Flowers is a floral concept store - there are no ready-made solutions for bouquets, individuality comes first. All people are different and the approach to each of them is personal — everyone has their own bouquet. The logo is based on the idea of layering and dynamics: the smooth lines of the second layer grow into the first, emphasizing the brand name — “Vetvi”.</a>
+            <a>Vetvi Flowers is a floral concept store - there are no ready-made solutions for bouquets, individuality comes first. All people are different and the approach to each of them is personal — everyone has their own bouquet. The logo is based on the idea of layering and dynamics: the smooth lines of the second layer grow into the first, emphasizing the brand name — "Vetvi".</a>
         </div>
 
 <div class="projects_tag" id="tagBlock">
@@ -123,7 +131,7 @@
         </figcaption>
         <h1 class="types-description">
             Established in 2017, Linen Texture is a European brand specializing in linen textiles and home apparel. Operating from their production hub in Vilnius, Lithuania, the brand takes pride in overseeing every aspect of manufacturing. This hands-on approach allows for flexibility in meeting customer needs.
-The recently unveiled logo signifies a bold step in redefining Linen Texture’s identity. Its dynamic design, reminiscent of clothing and textile patterns, captures the essence of the brand’s commitment to quality and innovation. As Linen Texture continues to shape the world of linen products and home attire, the new logo and typography serves as a visual representation of their dedication to excellence.</h1>
+The recently unveiled logo signifies a bold step in redefining Linen Texture's identity. Its dynamic design, reminiscent of clothing and textile patterns, captures the essence of the brand's commitment to quality and innovation. As Linen Texture continues to shape the world of linen products and home attire, the new logo and typography serves as a visual representation of their dedication to excellence.</h1>
     </div>
     <!-- PROJECT CAPTION -->
 
@@ -139,9 +147,8 @@ The recently unveiled logo signifies a bold step in redefining Linen Texture’s
 
     <!-- TWO BIG IMAGES -->
     <div class="two_img_box">
-        <img src="img/LinenTexture/linentexture_half_00.png" alt="linen-half_02.png" style="padding-right: 5px">
-        <img src="img/LinenTexture/linentexture_half_01.png" alt="linen-half_02.png" style="padding-left: 5px">
-
+        <img src="img/LinenTexture/linentexture_half_00.png" alt="linen-half_02.png">
+        <img src="img/LinenTexture/linentexture_half_01.png" alt="linen-half_02.png">
     </div>
     <!-- TWO BIG IMAGES -->
 
@@ -157,10 +164,6 @@ The recently unveiled logo signifies a bold step in redefining Linen Texture’s
  <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
     <!-- CAROUSEL -->
     <div class="carousel-container">
-        <div class="button-group">
-            <button class="button button--previous-wrapped">Previous wrapped</button>
-            <button class="button button--next-wrapped">Next wrapped</button>
-        </div>
         <div class="carousel">
             <div class="carousel-cell">
                 <img src="img/LinenTexture/linentexture-full_00.png" alt="LinenTexture-sl-00">
@@ -235,9 +238,8 @@ The recently unveiled logo signifies a bold step in redefining Linen Texture’s
 
 <!-- TWO BIG IMAGES -->
     <div class="two_img_box">
-        <img src="img/LinenTexture/linentexture_half_02.png" alt="LinenTexture-Half_02" style="padding-right: 5px">
-        <img src="img/LinenTexture/linentexture_half_03.png" alt="LinenTexture-Half_03" style="padding-left: 5px">
-
+        <img src="img/LinenTexture/linentexture_half_02.png" alt="LinenTexture-Half_02">
+        <img src="img/LinenTexture/linentexture_half_03.png" alt="LinenTexture-Half_03">
     </div>
     <!-- TWO BIG IMAGES -->
 
@@ -301,19 +303,10 @@ The recently unveiled logo signifies a bold step in redefining Linen Texture’s
     <!-- PROJECT MAIN CONTENT -->
     <div class="line"></div>
     
-    <!-- FOOTER -->
-    <footer class="foot">
-        <!-- <img class="ns-lettering" src="img/ns-lettering.svg"> -->
-           
-    <div class="footer-info">
-        <h1 style="flex-grow: 1">2024, Nikita Sapozhkov<br>Any Letters Here, Alh</h1>
-        <h1 style="flex-grow: 1">For collaboration and commissioned work don’t hesitate to write: <br>
-            <button  class="btn-default">Nikita.sapozhkov.alh@gmail.com</button></h1>
-    </div>
-
-    </footer>
-    <!-- FOOTER -->
-
+    <!-- FOOTER будет добавлен автоматически через footer.js -->
+    
+    <!-- Подключаем скрипт для общего футера -->
+    <script src="js/footer.js"></script>
 </body>
 
 </html>

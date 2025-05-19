@@ -5,15 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nikita Sapozhkov</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/draggable_box.css">
+    <link rel="stylesheet" href="css/style.css?v=2.1">
+    <link rel="stylesheet" href="css/draggable_box.css?v=1.1">
 
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
+    <link rel="manifest" href="site.webmanifest?v=1">
     <!-- FAVICON -->
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8H40FY6868"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8H40FY6868');
+</script>
+
 </head>
 
 <body>
@@ -232,12 +243,24 @@ CoFo Holz is an expressive serif typeface with unapologetic character. It counte
 <script src="js/draggable_box_desktop.js"></script>
 <script src="js/draggable_box_mobile.js"></script>
 
-
+<!-- Подключаем скрипт для общего футера -->
+<!-- <script src="js/footer.js"></script> -->
 
 <!-- DRAGGABLE BOX ON THE MAIN PAGE -->
 
-
-
+<script>
+// Принудительно перезагрузить шрифт
+document.fonts.ready.then(() => {
+  // Создаем принудительное обновление шрифта
+  const fontFaceSet = document.fonts;
+  fontFaceSet.forEach(font => fontFaceSet.delete(font));
+  
+  // Перезагружаем страницу с очисткой кеша
+  if (!window.location.href.includes('nocache')) {
+    window.location.href = window.location.href + (window.location.href.includes('?') ? '&' : '?') + 'nocache=' + new Date().getTime();
+  }
+});
+</script>
 
 </body>
 

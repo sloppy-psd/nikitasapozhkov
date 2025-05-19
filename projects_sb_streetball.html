@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- MAIN STYLE CSS -->
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
+    <link rel="manifest" href="site.webmanifest?v=1">
     <!-- FAVICON -->
     <!-- FLICKITY -->
     <link rel="stylesheet" type="text/css" href="/flickity-style.css">
@@ -22,7 +22,15 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
     <!-- FLICKITY -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8H40FY6868"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-8H40FY6868');
+</script>
 </head>
 
 <body>
@@ -164,10 +172,6 @@
     <!--IMAGES CAPTIONS-->
     <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
     <div class="carousel-container">
-        <div class="button-group">
-            <button class="button button--previous-wrapped">Previous wrapped</button>
-            <button class="button button--next-wrapped">Next wrapped</button>
-        </div>
         <div class="carousel">
             <div class="carousel-cell">
                 <img src="img/streetball-xxl/sb_street_xxl_caption-var_00.png" alt="sb_street_xxl_caption-var_00.png">
@@ -218,25 +222,12 @@
 </section>
     <!-- PROJECT MAIN CONTENT -->
 
-
-
-
-
-
     <div class="line"></div>
-     <!-- FOOTER -->
-    <footer class="foot">
-        <!-- <img class="ns-lettering" src="img/ns-lettering.svg"> -->
-           
-    <div class="footer-info">
-        <h1 style="flex-grow: 1">2024, Nikita Sapozhkov<br>Any Letters Here, Alh</h1>
-        <h1 style="flex-grow: 1">For collaboration and commissioned work don’t hesitate to write: <br>
-            <button  class="btn-default">Nikita.sapozhkov.alh@gmail.com</button></h1>
-    </div>
-
-    </footer>
-    <!-- FOOTER -->
-
+    
+    <!-- FOOTER будет добавлен автоматически через footer.js -->
+    
+    <!-- Подключаем скрипт для общего футера -->
+    <script src="js/footer.js"></script>
 </body>
 
 </html>

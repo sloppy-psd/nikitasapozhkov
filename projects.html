@@ -5,13 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projects</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2.1">
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
+    <link rel="manifest" href="site.webmanifest?v=1">
     <!-- FAVICON -->
+    <!-- Предзагрузка изображений -->
+    <script>
+        // Предзагрузка изображений превью для более быстрого отображения
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.projects-list a[data-preview]');
+            links.forEach(link => {
+                const imgSrc = link.getAttribute('data-preview');
+                if (imgSrc) {
+                    const img = new Image();
+                    img.src = imgSrc;
+                }
+            });
+        });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8H40FY6868"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8H40FY6868');
+</script>
 </head>
 
 <body>
@@ -54,7 +78,7 @@
 
   <div id="contentBlock">
 <div class="projects_description" id="descriptionBlock">
-            <a>Vetvi Flowers is a floral concept store - there are no ready-made solutions for bouquets, individuality comes first. All people are different and the approach to each of them is personal — everyone has their own bouquet. The logo is based on the idea of layering and dynamics: the smooth lines of the second layer grow into the first, emphasizing the brand name — “Vetvi”.</a>
+            <a>Vetvi Flowers is a floral concept store - there are no ready-made solutions for bouquets, individuality comes first. All people are different and the approach to each of them is personal — everyone has their own bouquet. The logo is based on the idea of layering and dynamics: the smooth lines of the second layer grow into the first, emphasizing the brand name — "Vetvi".</a>
         </div>
 
 <div class="projects_tag" id="tagBlock">
@@ -76,31 +100,31 @@
     <!-- PROJECTS LIST-->
      <section class="about_back">
     <div class="projects-list">
-         <a href="project_ClanSix.html">
+         <a href="project_ClanSix.html" data-preview="img/projects-preview/clan-six-preview.jpg">
             <h1>Clan Six</h1>
         </a>
         <div class="divider"></div>
-         <a href="projects_vetvi.html">
+         <a href="projects_vetvi.html" data-preview="img/new-baner/VetviFlowers-cover.png">
             <h1>Vetvi flowers</h1>
         </a>
         <div class="divider"></div>
-        <a href="projects_linentexture.html">
+        <a href="projects_linentexture.html" data-preview="img/projects-preview/linen-texture-preview.png">
             <h1>Linen Texture</h1>
         </a>
         <div class="divider"></div>
-         <a href="projects_sb_streetball.html">
+         <a href="projects_sb_streetball.html" data-preview="img/new-baner/StreetXXL-cover.png">
             <h1>Streetball XXL</h1>
         </a>
         <div class="divider"></div>
-        <a href="asics_silver_pack.html">
+        <a href="asics_silver_pack.html" data-preview="img/new-baner/AsicsSilverPack-cover.png">
             <h1>Asics Silver Pack</h1>
         </a>
         <div class="divider"></div>
-        <a href="" style="color: lightgray;">
+        <a href="" style="color: lightgray;" data-preview="img/projects-preview/market-express-preview.png">
             <h1>Yandex Market Express</h1>
         </a>
         <div class="divider"></div>
-        <a href="" style="color: lightgray;">
+        <a href="" style="color: lightgray;" data-preview="img/projects-preview/craft-food-preview.png">
             <h1>Craft Food</h1>
         </a>
         <!-- <div class="divider"></div>
@@ -123,22 +147,61 @@
         <a href="" style="color: lightgray;">
             <h1>Nike air max dia</h1>
         </a> -->
-        <div class="divider"></div>
+        <!-- <div class="divider"></div> -->
+    </div>
+
+    <!-- Контейнер для превью проектов -->
+    <div class="projects-preview-container">
+        <img id="projectPreviewImage" src="" alt="Project Preview">
     </div>
 </section>
     <!-- PROJECTS LIST-->
-   <!-- FOOTER -->
-    <footer class="foot">
-        <!-- <img class="ns-lettering" src="img/ns-lettering.svg"> -->
-           
-    <div class="footer-info">
-        <h1 style="flex-grow: 1">2024, Nikita Sapozhkov<br>Any Letters Here, Alh</h1>
-        <h1 style="flex-grow: 1">For collaboration and commissioned work don’t hesitate to write: <br>
-            <button  class="btn-default">Nikita.sapozhkov.alh@gmail.com</button></h1>
-    </div>
+   <!-- FOOTER будет добавлен автоматически через footer.js -->
 
-    </footer>
-    <!-- FOOTER -->
+    <!-- JavaScript для отображения превью проектов -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const previewContainer = document.querySelector('.projects-preview-container');
+            const previewImage = document.getElementById('projectPreviewImage');
+            const projectLinks = document.querySelectorAll('.projects-list a[data-preview]');
+            const offsetX = 15; // горизонтальный отступ от курсора
+            const offsetY = -25; // вертикальный отступ от курсора
+            let isPreviewVisible = false;
+            
+            document.addEventListener('mousemove', function(e) {
+                if (isPreviewVisible) {
+                    updatePreviewPosition(e);
+                }
+            });
+
+            function updatePreviewPosition(e) {
+                previewContainer.style.left = (e.pageX + offsetX) + 'px';
+                previewContainer.style.top = (e.pageY + offsetY) + 'px';
+            }
+
+            projectLinks.forEach(link => {
+                link.addEventListener('mouseenter', function(e) {
+                    const previewSrc = this.getAttribute('data-preview');
+                    if (previewSrc) {
+                        previewImage.src = previewSrc;
+                        updatePreviewPosition(e);
+                        previewContainer.style.opacity = '1';
+                        previewContainer.classList.add('visible');
+                        isPreviewVisible = true;
+                    }
+                });
+
+                link.addEventListener('mouseleave', function() {
+                    previewContainer.style.opacity = '0';
+                    previewContainer.classList.remove('visible');
+                    isPreviewVisible = false;
+                });
+            });
+        });
+    </script>
+    
+    <!-- Подключаем скрипт для общего футера -->
+    <script src="js/footer.js"></script>
 </body>
 
 </html>

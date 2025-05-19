@@ -5,13 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2.1">
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
+    <link rel="manifest" href="site.webmanifest?v=1">
     <!-- FAVICON -->
+    <style>
+        .expandable-content {
+            max-height: 220px;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .expandable-content.expanded {
+            max-height: 3000px !important;
+        }
+        
+        .expand-btn {
+            display: inline-block;
+            border: none;
+            background: none;
+            color: rgba(0,0,0,0.8);
+            cursor: pointer;
+            font-size: 11px;
+            text-align: left;
+            font-family: "AlhGrotesque", Arial, sans-serif;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            padding: 5px 0;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border-radius: 0;
+            position: relative;
+            left: 0;
+        }
+        
+        .expand-btn:hover {
+            color: rgba(255,80,248,0.65);
+            background-color: transparent;
+        }
+        
+        /* Стили для таблиц */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 17px;
+        }
+        
+        .info-table td {
+            padding: 2px 0;
+            vertical-align: top;
+            line-height: 1.3;
+        }
+        
+        .info-table .year-column {
+            width: 50px;
+            padding-right: 4px;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            color: rgba(0,0,0,0.8);
+
+            font-family: "AlhGrotesque", Arial, sans-serif;
+        }
+        
+        .info-table .detail-column {
+            width: 40%;
+            padding-left: 15px;
+        }
+        
+        .table-divider {
+            margin: 15px 0;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            opacity: 0.5;
+        }
+        
+        .table-header {
+            font-weight: 300;
+            text-align: left;
+            color: rgba(0,0,0,0.8);
+            font-size: 11px;
+            font-family: "AlhGrotesque", Arial, sans-serif;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* При узких экранах меняем структуру */
+        @media (max-width: 768px) {
+            .expandable-content {
+                max-height: 180px;
+            }
+            
+            .info-table .year-column {
+                width: 60px;
+                padding-right: 5px;
+            }
+            
+            .info-table .detail-column {
+                width: auto;
+                padding-left: 13px;
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8H40FY6868"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8H40FY6868');
+</script>
 </head>
 
 <body class="ab">
@@ -39,14 +147,21 @@
         <h1>Nikita Sapozhkov is a type and graphic designer whose expertise involves type development and extensive experimentation in the field. With this experience, he crafts unique wordmarks, letterings, and strong visual systems for brands, special projects, individuals, as well as cultural and art institutions. <br> </h1>
     </div>
     <div class="contact-info">
-        <h1 style="flex-grow: 6">Don’t hesitate to reach out: <a style="color: blue;">nikita.sapozhkov.alh@gmail.com</a></h1>
+        <h1 style="flex-grow: 6">Don’t hesitate to reach out: <a style="color:rgba(255,80,248,0.65);">info@nikitasapozhkov.com</a></h1>
         <img style="flex-grow: 1" class="ALH-logo" src="img/ns_logo_00.svg">
     </div>
 
 
     <!-- SOCIAL MEDIA -->
     <div class="social-media">
+        
         <a id="center" href="https://sapozhkov.tumblr.com" target="_blank" style="flex-grow: 4">tumblr</a>
+        <a id="center" href="https://www.are.na/nikita-sapozhkov/sapozhkovs-do" target="_blank" style="flex-grow: 4">Are.na</a>
+        <a id="center" href="https://t.me/typefather" target="_blank" style="flex-grow: 4">Tg</a>
+        <a id="center" href="https://www.instagram.com/nikita_sapozhkov/?hl=en" target="_blank" style="flex-grow: 4">Inst</a>
+
+
+
     </div>
     <div class="line"></div>
     <!-- SOCIAL MEDIA -->
@@ -56,7 +171,7 @@
     <div class="selected-clients">
         <h1 id="left">
             <p style="text-align: center; margin: 0; ">Selected clients<br><br>
-                Street beat • Aa-Library • Asics • Nike • Clan Six • Yandex</p>
+                Street beat • Yandex • Aa-Library • Thingers • Tuman Studio</p>
         </h1>
     </div>
     <div class="line"></div>
@@ -66,83 +181,330 @@
     <!-- IFORMATION -->
     <div class="two-column">
         <h1>
-            <p style="text-align: center; margin: 0;">Talks and Lectures</p><br>
-
-            • Royal Academy of Art the Hague (KABK), 2023<br>
-            • BHSD, 2022<br>
-            • British higher school of art & design, 2018–today<br>
-            • Type Design Workshop, 2021<br>
-            • Plenum Agency. Lecture, 2021<br>
-            • Type Design Workshop, 2020<br>
-            • Geek Brains online Academy, 2020<br>
-            • Moscow University of printing arts, 2017–2020<br>
-            • Type Design Workshop. Lecture about typedesign and responsive lettering, 2019<br>
-            • Placeholder. Lecture: “Type design: from love to hate and back”, 2019<br>
-            • Lettering workshop at the Placeholder library, 2019<br>
-            • British higher school of art & design. Lecture, 2018<br>
-            • Type Design Workshop. Lection about type tools and type workflows, 2018<br>
+            <p style="text-align: center; margin: 0; font-size: 17px; font-weight: normal; text-transform: uppercase;">Talks and Lectures</p><br>
+            <div class="expandable-content" id="talks">
+                <table class="info-table">
+                    <tr class="table-header">
+                        <td class="year-column">YEAR</td>
+                        <td>Place</td>
+                        <td class="detail-column">FORMAT</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2024</td>
+                        <td>Yandex Fabrika</td>
+                        <td class="detail-column">Talk</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2024</td>
+                        <td>ONY Agency</td>
+                        <td class="detail-column">Lecture</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2023</td>
+                        <td><a href="https://www.kabk.nl/" target="_blank">Royal Academy of Art The Hague</a></td>
+                        <td class="detail-column">Lecture</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2022</td>
+                        <td>BHSD</td>
+                        <td class="detail-column">Lecture</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2021</td>
+                        <td>Type Design Workshop</td>
+                        <td class="detail-column">Workshop</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2021</td>
+                        <td>Plenum Agency</td>
+                        <td class="detail-column">Lecture</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2020</td>
+                        <td>Type Design Workshop</td>
+                        <td class="detail-column">Lecture</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2020</td>
+                        <td>Geek Brains Online Academy</td>
+                        <td class="detail-column">Online Lecture</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2019</td>
+                        <td>Type Design Workshop</td>
+                        <td class="detail-column">Lecture</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2019</td>
+                        <td>Placeholder</td>
+                        <td class="detail-column">Lecture</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2019</td>
+                        <td>Placeholder Library</td>
+                        <td class="detail-column">Workshop</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2018–2022</td>
+                        <td>British Higher School of Art & Design</td>
+                        <td class="detail-column">Tutor</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2018</td>
+                        <td>British Higher School of Art & Design</td>
+                        <td class="detail-column">Lecture Series</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2018</td>
+                        <td>Type Design Workshop</td>
+                        <td class="detail-column">Workshop</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017–2020</td>
+                        <td>Moscow University of Printing Arts</td>
+                        <td class="detail-column">Tutor</td>
+                    </tr>
+                </table>
+            </div>
+            <button class="expand-btn" onclick="toggleSection('talks', this)">SHOW MORE</button>
         </h1>
+        
         <div class="line-hidden"></div>
+        
         <h1>
-            <p style="text-align: center; margin: 0;">Nominations and Awards</p><br>
-            <p style="text-align: center; margin: 0;">2020</p><br>
-            • Tokyo TDC competition. Wordmark for “Vetvi Flowers” was selected as one of the works deemed “excellent”.<br>
-            • The Communication Arts Award for the “CoFo Farm Specimen”.<br>
-            <br>
-            <p style="text-align: center; margin: 0;">2018</p><br>
-            • Short-list of the “TYPOMANIA” international typography festival.<br>
-            • The short-list of the “4th Block” posters competition.<br>
-            <br>
-            <p style="text-align: center; margin: 0;">2017</p><br>
-            • The international book design competition “Image of the Book”. Laureate in the nomination “Best Book Design” for the design of a book about the modern typeface “Holz”.<br>
-            • Short-list of the “TYPOMANIA” international type festival.<br>
-            • The short-list of the posters exhibition “Nicosia, the City of Utopia”.<br>
-            • The short-list of the “Weltformat” competition. Theme “Detours”.<br>
-            <br>
-            <p style="text-align: center; margin: 0;">2016</p><br>
-            • “Image of the Book”. Diploma in the nomination “Best Book Design“ for the graphic design of the novel “The Old Man and the Sea” by E. Hemingway.<br>
-            • “Image of the Book”. Diploma in the nomination “Best Book Design“ for the design layout of the collection of poems by M. Tsvetaeva.<br>
-            • The short-list of the international poster competition “FUKUDA!”.
-            Art space “ARTBasement” as part of the Moscow International Biennale of Graphic Design “Golden Bee 12”.<br>
-            • Short-list of the “TYPOMANIA”. Project ”Type_Code”. Logo shot generated in processing.<br>
-            • Laureate of the competition “Fire Book”, for the design of the story “The Old Man and the Sea”.<br>
-            <br>
-            <p style="text-align: center; margin: 0;">2015</p><br>
-            • The short-list of the posters exhibition “Edible-Inedible”.<br>
-            <br>
-            <p style="text-align: center; margin: 0;">2014</p><br>
-            • “Image of the Book”. Diploma in the nomination “new names in book illustration” for the design of the book “my house”.
+            <p style="text-align: center; margin: 0; font-size: 17px; font-weight: normal; text-transform: uppercase;">Nominations and Awards</p><br>
+            <div class="expandable-content" id="awards">
+                <table class="info-table">
+                    <tr class="table-header">
+                        <td class="year-column">YEAR</td>
+                        <td>AWARD</td>
+                        <td class="detail-column">PROJECT</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2020</td>
+                        <td>Tokyo TDC, Typographic Excellence</td>
+                        <td class="detail-column">Vetvi Flowers</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2020</td>
+                        <td>Red Dot Award</td>
+                        <td class="detail-column">May: A Typeface to Remember</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2020</td>
+                        <td>The Communication Arts</td>
+                        <td class="detail-column">CoFo Farm Specimen</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2018</td>
+                        <td>TYPOMANIA, Short-list</td>
+                        <td class="detail-column">CoFo Robert Animation</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2018</td>
+                        <td>4th Block, Short-list</td>
+                        <td class="detail-column">Eco Posters</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017</td>
+                        <td>Image of the Book, Best Book Design</td>
+                        <td class="detail-column">Book about “CoFo Holz”</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017</td>
+                        <td>TYPOMANIA, Short-list</td>
+                        <td class="detail-column">Holz Typeface</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017</td>
+                        <td>Graphic Stories, Short-list</td>
+                        <td class="detail-column">Theme “Nicosia, the City of Utopia”</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017</td>
+                        <td>WELTFORMAT, Short-list</td>
+                        <td class="detail-column">Theme “Detours”</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>Image of the Book, Best Book Design</td>
+                        <td class="detail-column">Book “The Old Man and the Sea” by E. Hemingway</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>Image of the Book, Best Book Design</td>
+                        <td class="detail-column">Design layout For collection of poems by M. Tsvetaeva</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>Poster Competition “FUKUDA!”, Short-list</td>
+                        <td class="detail-column">Posters</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>TYPOMANIA, Short-list</td>
+                        <td class="detail-column">Project “Type_Code”. Logo shot generated in processing</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>“Fire Book” Competition, Laureate</td>
+                        <td class="detail-column">Book “The Old Man and the Sea”</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2015</td>
+                        <td>Posters Exhibition “Edible-Inedible”, Short-list</td>
+                        <td class="detail-column">Posters</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2014</td>
+                        <td>Image of the Book, nomination “new names”</td>
+                        <td class="detail-column">Design of the book “my house”</td>
+                    </tr>
+                </table>
+            </div>
+            <button class="expand-btn" onclick="toggleSection('awards', this)">SHOW MORE</button>
         </h1>
     </div>
     <div class="line"></div>
     <div class="two-column">
         <h1>
-            <p style="text-align: center; margin: 0;">Featured in</p><br>
-            • Tokyo TDC Annual Awards 2021 “Tokyo TDC Vol.32”, 2020<br>
-            • Communication Arts Award Typography Annual 11, the January/February 2021 issue, 2020<br>
-            • Ficciones Typografika 1642, 2019<br>
-            • “Black Plan” contest book, 2017<br>
-            • “Moscow student typography” booklet within the publishing program of the Typomania festival, 2016<br>
-            • Project “Calendar Number One”, 2016<br>
-            • Catalog “Edible-Inedible—Gastronomic Poster Exhibition”, 2015<br>
-            • Tokyo TDC Annual Awards “Tokyo TDC Vol.26”, 2015<br>
+            <p style="text-align: center; margin: 0; font-size: 17px; font-weight: normal; text-transform: uppercase;">Featured in</p><br>
+            <div class="expandable-content" id="featured">
+                <table class="info-table">
+                    <tr class="table-header">
+                        <td class="year-column">YEAR</td>
+                        <td>PUBLICATION</td>
+                        <td class="detail-column">FORMAT</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2024</td>
+                        <td><a href="https://the-brandidentity.com/typeface/contrast-foundrys-elegant-serif-cofo-holz-leans-on-type-design-history-and-is-all-the-better-for-it" target="_blank">The Brand Identity</a></td>
+                        <td class="detail-column">Article</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2020</td>
+                        <td>Tokyo TDC Vol.32</td>
+                        <td class="detail-column">Annual Book</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2020</td>
+                        <td>Communication Arts</td>
+                        <td class="detail-column">Issue</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2019</td>
+                        <td>Ficciones Typografika 1642</td>
+                        <td class="detail-column">Book</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017</td>
+                        <td>Black Plan</td>
+                        <td class="detail-column">Catalog</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>Student Typography</td>
+                        <td class="detail-column">Booklet</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>Calendar Number One</td>
+                        <td class="detail-column">Calendar</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2015</td>
+                        <td>Edible-Inedible — Gastronomic Poster Exhibition</td>
+                        <td class="detail-column">Catalog</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2015</td>
+                        <td>Tokyo TDC Vol.26</td>
+                        <td class="detail-column">Annual Book</td>
+                    </tr>
+                </table>
+            </div>
+            <button class="expand-btn" onclick="toggleSection('featured', this)">SHOW MORE</button>
         </h1>
+        
         <div class="line-hidden"></div>
+        
         <h1>
-            <p style="text-align: center; margin: 0;">Exhibitions</p><br>
-            • “Open Collab” project. Online exhibition, 2020<br>
-            • “4th Block” posters exhibition, 2018<br>
-            • “Weltformat” posters exhibition, Lucerne, 2017<br>
-            • Exhibition “34 Youth exhibition of the section of graphics” Kuznetsky most, 20 , 2017<br>
-            • The “TYPOMANIA” festival. Participant of the posters exhibition, 2017 <br>
-            • Poster exhibition “Black Plan”, 2017<br>
-            • Posters exhibition “Nicosia, the City of Utopia”. Cyprus, Nicosia, 2017<br>
-            • Curator of the exhibition “26 & 33” in the gallery “Promgrafika”, 2016<br>
-            • “Lebedev 135” in the book fair “Non-fiction” in the Central House of Artists, 2016<br>
-            • The exhibition "FUKUDA!", Art space “ARTBasement” as part of the Moscow International Biennale of Graphic Design “Golden Bee 12”, 2016<br>
-            • “#More life” dedicated to the Soviet sports poster in the art space “Winzavod”, 2016<br>
-            • “Edible-Inedible”, 2015<br>
-            • Interactive installation with letters for exhibition in the Museum of Moscow, 2015<br>
+            <p style="text-align: center; margin: 0; font-size: 17px; font-weight: normal; text-transform: uppercase;">Exhibitions</p><br>
+            <div class="expandable-content" id="exhibitions">
+                <table class="info-table">
+                    <tr class="table-header">
+                        <td class="year-column">YEAR</td>
+                        <td>EXHIBITION</td>
+                        <td class="detail-column">Location</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2020</td>
+                        <td>Open Collab</td>
+                        <td class="detail-column">Online</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2018</td>
+                        <td>4th Block</td>
+                        <td class="detail-column">Kharkiv</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017</td>
+                        <td>WELTFORMAT</td>
+                        <td class="detail-column">Lucerne</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017</td>
+                        <td>34 Youth Exhibition of the Section of Graphics</td>
+                        <td class="detail-column">Moscow</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017</td>
+                        <td>TYPOMANIA</td>
+                        <td class="detail-column">Moscow</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017</td>
+                        <td>Black Plan</td>
+                        <td class="detail-column">Moscow</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2017</td>
+                        <td>Nicosia, the City of Utopia</td>
+                        <td class="detail-column">Nicosia</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>“26 & 33”, Curator</td>
+                        <td class="detail-column">Moscow</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>“Lebedev 135”</td>
+                        <td class="detail-column">Moscow, Book Fair “Non-fiction”</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>The Exhibition “FUKUDA!”. PART OF “GOLDEN BEE 12”</td>
+                        <td class="detail-column">Moscow, Art Space “ARTBasement”</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2016</td>
+                        <td>#More Life</td>
+                        <td class="detail-column">Moscow, Art Space “Winzavod”</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2015</td>
+                        <td>Edible-Inedible</td>
+                        <td class="detail-column">Moscow</td>
+                    </tr>
+                    <tr>
+                        <td class="year-column">2015</td>
+                        <td>Typography Cube</td>
+                        <td class="detail-column">Moscow, Museum of Moscow</td>
+                    </tr>
+                </table>
+            </div>
+            <button class="expand-btn" onclick="toggleSection('exhibitions', this)">SHOW MORE</button>
         </h1>
     </div>
     </section>
@@ -150,18 +512,53 @@
 
     <!-- IFORMATION -->
     
-    <!-- FOOTER -->
-    <footer class="foot">
-        <!-- <img class="ns-lettering" src="img/ns-lettering.svg"> -->
-           
-    <div class="footer-info">
-        <h1 style="flex-grow: 1">2024, Nikita Sapozhkov<br>Any Letters Here, Alh</h1>
-        <h1 style="flex-grow: 1">For collaboration and commissioned work don’t hesitate to write: <br>
-            <button  class="btn-default">Nikita.sapozhkov.alh@gmail.com</button></h1>
-    </div>
-
-    </footer>
-    <!-- FOOTER -->
+    <!-- FOOTER будет добавлен автоматически через footer.js -->
+    
+    <!-- Подключаем скрипт для общего футера -->
+    <script src="js/footer.js"></script>
+    
+    <!-- Скрипт для раскрывающихся списков -->
+    <script>
+        // Простая функция для переключения состояния секции
+        function toggleSection(id, button) {
+            var section = document.getElementById(id);
+            
+            if (section.classList.contains('expanded')) {
+                // Если секция уже расширена, сворачиваем ее
+                section.classList.remove('expanded');
+                button.textContent = 'SHOW MORE';
+                
+                // Устанавливаем начальную высоту в зависимости от размера экрана
+                if (window.innerWidth > 768) {
+                    section.style.maxHeight = '220px';
+                } else {
+                    section.style.maxHeight = '180px';
+                }
+            } else {
+                // Иначе, разворачиваем секцию
+                section.classList.add('expanded');
+                button.textContent = 'SHOW LESS';
+            }
+        }
+        
+        // Устанавливаем начальные высоты при загрузке и изменении размера окна
+        function setInitialHeights() {
+            var sections = document.querySelectorAll('.expandable-content');
+            var defaultHeight = window.innerWidth > 768 ? '220px' : '180px';
+            
+            sections.forEach(function(section) {
+                if (!section.classList.contains('expanded')) {
+                    section.style.maxHeight = defaultHeight;
+                }
+            });
+        }
+        
+        // Запускаем установку высоты после полной загрузки страницы
+        window.onload = setInitialHeights;
+        
+        // И при изменении размера окна
+        window.addEventListener('resize', setInitialHeights);
+    </script>
 </body>
 
 </html>

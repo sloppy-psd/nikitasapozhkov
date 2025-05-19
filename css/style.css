@@ -1,5 +1,3 @@
-
-
 body{
 /*background-color: #E1E1E1;*/
  max-width: 100%;
@@ -17,7 +15,7 @@ margin-right: 20px;*/
 
 .ab {
 /*background-color: #008B4B;*/
-background-color: #white;
+background-color: white;
 
 margin-left: 0;
 margin-right: 0;
@@ -36,25 +34,20 @@ margin-right: 0;
 }
 
 @font-face {
-  font-family: "CoFoSans2023";
-  src: url("./fonts/CoFoSans-Regular.woff2") format("woff2");
-}
-
-@font-face {
   font-family: "AlhGrotesque";
-  src: url("./fonts/NeuGrotesk-Regular.woff2") format("woff2");
+  src: url("./fonts/AlhAisleBetav0.3-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "AlhGrotesque-Medium";
-  src: url("./fonts/NeuGrotesk-Medium.woff2") format("woff2");
+  src: url("./fonts/AlhAisleBetav0.3-Regular.woff2") format("woff2");
 }
 
-@font-face {
+/* @font-face {
   font-family: "tag-var";
   src: 
        url("./fonts/tag-var_04_2ms-VF.ttf") format("truetype-variations");
-}
+} */
 
 
 /*HEADER*/
@@ -109,7 +102,7 @@ box-sizing: content-box;
 
 padding-left: 10px;
 padding-right: 10px;
-padding-top: 10px;
+padding-top: 8px;
 padding-bottom: 3px;
 }
 
@@ -137,10 +130,10 @@ padding-bottom: 3px;
 
 .header_name_menu {
 display: inline-block;
-font-size: 17px;
-font-family: AlhGrotesque, Times;
+font-size: 15px;
+font-family: AlhGrotesque;
 font-weight: normal;
-line-height: 17px;
+line-height: 15px;
 min-width: 200px;
 text-transform: uppercase;
 color: black;
@@ -186,10 +179,10 @@ font-family: AlhGrotesque-Medium, Times;
 /*HEADER BUTTONS MENU*/
 .header_buttons_menu {
 display: inline-block;
-font-size: 17px;
+font-size: 15px;
 font-family: AlhGrotesque, Times;
 font-weight: normal;
-line-height: 17px;
+line-height: 15px;
 text-transform: uppercase;
 }
 
@@ -379,7 +372,7 @@ margin-right: 0px;
 .sapozhkov {
   display: inline-block;
 font-size: 21px;
-font-family: AlhGrotesque, Times;
+font-family: AlhGrotesque;
 font-weight: normal;
 line-height: 21px;
 min-width: 200px;
@@ -427,7 +420,7 @@ font-size: 19px;
 
 #videoContainer {
   width: 100%;
-/*  max-width: 800px; /* You can adjust the maximum width as needed */*/
+/*  max-width: 800px; */ /* You can adjust the maximum width as needed */
 }
 @media screen and (max-width: 811px) {
 #videoContainer {
@@ -1330,12 +1323,13 @@ width: 100%;
   font-weight: normal;
 
   color: black;
-  font-size: 21px;
-  letter-spacing: 2px;
+  font-size: 17px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   margin-right: 20px;
   line-height: 22px;
   padding-left: 15px;
+  margin-top: 25px;
  }
 
 @media screen and (max-width: 811px) {
@@ -1373,7 +1367,7 @@ margin-top: 15px;
 
 
 .btn-default {
-  margin-top: 15px;
+  margin-top: 0px;
   margin-right: 20px;
   border-radius: 40px;
   padding: 20px;
@@ -1382,8 +1376,8 @@ margin-top: 15px;
   background: white;
   color: black;
   font-family: AlhGrotesque;
-  font-size: 21px;
-  letter-spacing: 2px;
+  font-size: 17px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   border: none;
 }
@@ -1392,7 +1386,7 @@ margin-top: 15px;
 button:hover{
   cursor: pointer;
   color: white;
-  background: blue;
+  background:rgba(255,80,248,0.65);
 
 }
 
@@ -1534,9 +1528,9 @@ font-size: 17px;
 .contact-info h1 {
 width: 50%;
 font-family: AlhGrotesque, Times;
-letter-spacing: 2px;
+letter-spacing: 0.5px;
 font-weight: normal;
-font-size: 20px;
+font-size: 17px;
 text-align: left;
 text-transform: uppercase;
 color: black;
@@ -1854,7 +1848,7 @@ font-family: AlhGrotesque-Medium, Arial;
 font-weight: normal;
 font-size: 17px;
 color: black;
-width: 10%;
+width: 20%;
 /*min-width: 30%;*/
 margin: 0;
 padding-top: 10px;
@@ -1871,7 +1865,7 @@ margin-bottom: 5px;
 font-family: AlhGrotesque-Medium, Arial;
 /*letter-spacing: 1px;*/
 font-weight: normal;
-font-size: 17px;
+font-size: 15px;
 color: black;
 width: 10%;
 /*min-width: 30%;*/
@@ -1888,7 +1882,7 @@ margin-bottom: 5px;
 font-family: AlhGrotesque-Medium, Arial;
 /*letter-spacing: 1px;*/
 font-weight: normal;
-font-size: 17px;
+font-size: 15px;
 color: black;
 width: 20%;
 /*min-width: 30%;*/
@@ -2156,4 +2150,115 @@ width: 100%;
 
 
 /*PROJECTS | ASICS SILVER PACK*/ /*PROJECTS | ASICS SILVER PACK*/ /*PROJECTS | ASICS SILVER PACK*/
+
+
+/* Стили для контейнера с превью проектов */
+.projects-preview-container {
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40%;
+  max-width: 500px;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform-origin: left top;
+}
+
+.projects-preview-container img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  border-radius: 15px;
+  object-fit: contain;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transform: scale(0.97);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-preview-container.visible img {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 1200px) {
+  .projects-preview-container {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  .projects-preview-container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .projects-preview-container {
+    width: 60%;
+  }
+}
+
+.info-table td a {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.info-table td a:hover {
+  color: rgba(57,255,88,0.85);
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+}
+
+/* Глобальный стиль для ссылок с подчеркиванием */
+a.underlined {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+  transition: color 0.3s ease;
+}
+
+a.underlined:hover {
+  color: rgba(57,255,88,0.85);
+  text-decoration-thickness: 0.5px;
+}
+
+/* Стили для ссылок в проектных страницах */
+.project_caption a, 
+.types-description a, 
+.project_background a, 
+.project_noneback a {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+  transition: color 0.3s ease;
+}
+
+.project_caption a:hover, 
+.types-description a:hover, 
+.project_background a:hover, 
+.project_noneback a:hover {
+  color: rgba(57,255,88,0.85);
+  text-decoration-thickness: 0.5px;
+}
+
+.info-table .year-column {
+    width: 50px;
+    padding-right: 4px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: rgba(0,0,0,0.8);
+    font-family: "AlhGrotesque", Arial, sans-serif;
+}
+
+.info-table .detail-column {
+    width: 40%;
+    padding-left: 15px;
+}
 

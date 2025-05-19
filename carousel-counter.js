@@ -1,24 +1,25 @@
+// Инициализация карусели
 var carouselContainers = document.querySelectorAll('.carousel-container');
 
-for ( var i=0; i < carouselContainers.length; i++ ) {
+for (var i = 0; i < carouselContainers.length; i++) {
   var container = carouselContainers[i];
-  initCarouselContainer( container );
+  initCarouselContainer(container);
 }
 
-function initCarouselContainer( container ) {
+function initCarouselContainer(container) {
   var carousel = container.querySelector('.carousel');
-  var flkty = new Flickity( carousel, {
-    // imagesLoaded: true,
-    // percentPosition: false,
+  var flkty = new Flickity(carousel, {
     pageDots: false,
-    adaptiveHeight: true,
-      cellAlign: 'left',
-  contain: true,
-  wrapAround: true,
-  prevNextButtons: false,
-  fade: true,
-
+    adaptiveHeight: false,
+    cellAlign: 'center',
+    contain: true,
+    wrapAround: true,
+    prevNextButtons: false,
+    fade: true,
+    resize: true,
+    imagesLoaded: true // Добавляем загрузку изображений перед инициализацией
   });
+  
   var carouselStatus = container.querySelector('.carousel-status');
 
   function updateStatus() {
@@ -27,16 +28,37 @@ function initCarouselContainer( container ) {
   }
   updateStatus();
   
+  // Скрываем кнопки навигации
   var previousButton = container.querySelector('.button--previous-wrapped');
-  previousButton.addEventListener('click', function () {
-    flkty.previous();
-  });
-  
   var nextButton = container.querySelector('.button--next-wrapped');
-  nextButton.addEventListener('click', function () {
-    flkty.next();
+  
+  if (previousButton && nextButton) {
+    previousButton.style.display = 'none';
+    nextButton.style.display = 'none';
+  }
+  
+  // Добавляем обработчик для клика по карусели
+  carousel.addEventListener('click', function(event) {
+    var carouselRect = carousel.getBoundingClientRect();
+    var halfPoint = carouselRect.left + carouselRect.width / 2;
+    
+    if (event.clientX < halfPoint) {
+      // Клик по левой части - предыдущий слайд
+      flkty.previous();
+    } else {
+      // Клик по правой части - следующий слайд
+      flkty.next();
+    }
   });
 
-  flkty.on( 'select', updateStatus );
+  flkty.on('select', updateStatus);
   
+  // Обновляем Flickity при загрузке страницы и при изменении размера окна
+  window.addEventListener('load', function() {
+    flkty.resize();
+  });
+  
+  window.addEventListener('resize', function() {
+    flkty.resize();
+  });
 }
