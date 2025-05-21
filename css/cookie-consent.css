@@ -89,13 +89,22 @@
         border-radius: 15px 15px 0 0 !important;
         margin: 0 !important;
         padding: 15px !important;
+        box-sizing: border-box !important;
     }
-    
+
     #cookie-consent-container.cookie-consent .cookie-consent-buttons {
         gap: 8px !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
-    
+
     #cookie-consent-container.cookie-consent .cookie-consent-button {
         padding: 8px 10px !important;
+        width: calc(50% - 4px) !important;
+        min-width: 0 !important;
+        font-size: 11px !important;
+        letter-spacing: 0.5px !important;
+        box-sizing: border-box !important;
     }
 } 
