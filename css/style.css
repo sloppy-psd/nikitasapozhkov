@@ -96,10 +96,7 @@ width: 100%;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 8px;
-  padding-bottom: 3px;
-  height: 40px;
-  display: flex;
-  align-items: center;
+  padding-bottom: 5px;
 }
 
 @media screen and (max-width: 1265px) {
@@ -135,7 +132,7 @@ width: 100%;
   color: black;
   background-color: none;
   text-decoration: none;
-  vertical-align: middle;
+  vertical-align: baseline;
   letter-spacing: 1px;
 }
 
@@ -177,14 +174,13 @@ width: 100%;
   font-weight: normal;
   line-height: 15px;
   text-transform: uppercase;
-  vertical-align: middle;
 }
 
 .header_buttons_menu a {
   color: black;
   background-color: none;
   text-decoration: none;
-  vertical-align: middle;
+  vertical-align: baseline;
   letter-spacing: 1px;
 }
 
@@ -233,27 +229,30 @@ width: 100%;
   display: inline-block;
   text-transform: uppercase;
   color: black;
-  vertical-align: middle;
-  line-height: 40px;
+  vertical-align: baseline;
 }
 
 @media screen and (max-width: 810px) {
   .header_project_name {
     font-size: 31px;
-    line-height: 40px;
+    line-height: 13px;
   }
 }
 @media screen and (max-width: 640px) {
   .header_project_name {
     font-size: 31px;
-    line-height: 40px;
+    line-height: 13px;
   }
 }
 
 @media screen and (max-width: 570px) {
   .header_project_name {
-    font-size: 31px;
-    line-height: 40px;
+    line-height: 13px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-right: 0px;
+    vertical-align: top;
+    font-family: AlhGrotesque-Medium;
   }
 }
 
