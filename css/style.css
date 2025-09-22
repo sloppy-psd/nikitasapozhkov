@@ -1864,6 +1864,17 @@ color: black;
     display: block;
  }
 
+@media screen and (max-width: 640px) {
+  .main_img_box{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .main_img_box img,
+  .main_img_box video{
+    border-radius: 0;
+  }
+}
+
 
 
  .two_img_box{
