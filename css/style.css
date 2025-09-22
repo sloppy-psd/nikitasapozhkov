@@ -1916,6 +1916,22 @@ flex-wrap: wrap;
   }
 }
 
+/* Stack two_img_box halves on mobile */
+@media screen and (max-width: 811px) {
+  .two_img_box{
+    flex-direction: column;
+  }
+  .two_img_box .half{
+    width: 100% !important;
+  }
+  .two_img_box .half img,
+  .two_img_box .half video{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
 /* HALF-WIDTH IMAGE CAPTIONS (removed) */
 
 
