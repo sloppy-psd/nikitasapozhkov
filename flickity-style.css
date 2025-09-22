@@ -116,7 +116,7 @@ body {
 }
 
 .two_img_box img:first-child {
-  padding-right: 5px;
+  padding-right: 0;
 }
 
 .two_img_box img:last-child {

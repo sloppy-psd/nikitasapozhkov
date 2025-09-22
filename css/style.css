@@ -1856,6 +1856,14 @@ color: black;
 
  }
 
+/* Support video in main_img_box */
+.main_img_box video{
+    width: 100%;
+  height: auto;
+    border-radius: 15px;
+    display: block;
+ }
+
 
 
  .two_img_box{
@@ -1865,14 +1873,50 @@ flex-wrap: wrap;
  margin-left: 15px;
   margin-right: 15px;
   margin-top: 5px;
+  padding-right: 0px;
+
 }
 
 .two_img_box img{
     width:  50%;
   height: auto;
     border-radius: 15px;
+    padding-right: 0px;
 
  }
+
+/* Local wrappers for half-width images with captions inside two_img_box */
+.half{
+  width: 50%;
+  margin: 0px;
+}
+.two_img_box .half img{
+  width: 100%;
+  height: auto;
+  display: wrap;
+  border-radius: 15px;
+  padding-right: 0px;
+
+}
+.two_img_box .half_caption{
+  font-family: AlhGrotesque-Medium, Arial;
+  font-weight: normal;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  /* text-transform: uppercase; */
+  color: black;
+  line-height: 1.2em;
+  margin-top: 10px;
+  text-align: left;
+}
+@media screen and (max-width: 640px) {
+  .two_img_box .half_caption{
+    font-size: 10px;
+    line-height: 1.1em;
+  }
+}
+
+/* HALF-WIDTH IMAGE CAPTIONS (removed) */
 
 
 
