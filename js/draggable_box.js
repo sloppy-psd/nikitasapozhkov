@@ -1,16 +1,26 @@
 let isDragging = false;
+let hasMoved = false; // Флаг для отслеживания реального перемещения
 let draggedElement = null;
 let offsetX, offsetY;
+let startX, startY; // Начальные координаты для определения движения
+const DRAG_THRESHOLD = 5; // Минимальное расстояние в пикселях для определения drag
 
 function startDrag(e, element) {
   e.preventDefault();
   isDragging = true;
+  hasMoved = false; // Сбрасываем флаг движения при начале
   draggedElement = element;
-  offsetX = e.type.startsWith('touch') ? e.touches[0].clientX - draggedElement.getBoundingClientRect().left : e.clientX - draggedElement.getBoundingClientRect().left;
-  offsetY = e.type.startsWith('touch') ? e.touches[0].clientY - draggedElement.getBoundingClientRect().top : e.clientY - draggedElement.getBoundingClientRect().top;
+  
+  const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+  const clientY = e.type.startsWith('touch') ? e.touches[0].clientY : e.clientY;
+  
+  startX = clientX;
+  startY = clientY;
+  offsetX = clientX - draggedElement.getBoundingClientRect().left;
+  offsetY = clientY - draggedElement.getBoundingClientRect().top;
 
   document.addEventListener('mousemove', handleDrag);
-  document.addEventListener('touchmove', handleDrag);
+  document.addEventListener('touchmove', handleDrag, { passive: false });
   document.addEventListener('mouseup', stopDrag);
   document.addEventListener('touchend', stopDrag);
 }
@@ -20,8 +30,21 @@ function handleDrag(e) {
     const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
     const clientY = e.type.startsWith('touch') ? e.touches[0].clientY : e.clientY;
     
+    // Проверяем, превышен ли порог движения
+    const deltaX = Math.abs(clientX - startX);
+    const deltaY = Math.abs(clientY - startY);
+    
+    if (deltaX > DRAG_THRESHOLD || deltaY > DRAG_THRESHOLD) {
+      hasMoved = true;
+    }
+    
     draggedElement.style.left = clientX - offsetX + 'px';
     draggedElement.style.top = clientY - offsetY + 'px';
+    
+    // Предотвращаем скролл на мобильных при перетаскивании
+    if (e.type.startsWith('touch') && hasMoved) {
+      e.preventDefault();
+    }
   }
 }
 
@@ -32,10 +55,24 @@ function stopDrag() {
   document.removeEventListener('touchmove', handleDrag);
   document.removeEventListener('mouseup', stopDrag);
   document.removeEventListener('touchend', stopDrag);
+  
+  // Сбрасываем флаг движения через небольшую задержку,
+  // чтобы событие click успело проверить его
+  setTimeout(() => {
+    hasMoved = false;
+  }, 100);
 }
 
 function handleButtonClick(link) {
   window.location.href = link;
+}
+
+// Блокируем переход по ссылкам внутри draggable блоков при перетаскивании
+function preventLinkDuringDrag(e) {
+  if (hasMoved) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
 }
 
 // Adding event listeners for dragging boxes on desktop
@@ -43,12 +80,23 @@ draggableBox1.addEventListener('mousedown', (e) => startDrag(e, draggableBox1));
 draggableBox2.addEventListener('mousedown', (e) => startDrag(e, draggableBox2));
 
 // Adding touch event listeners for dragging boxes on mobile
-draggableBox1.addEventListener('touchstart', (e) => startDrag(e, draggableBox1));
-draggableBox2.addEventListener('touchstart', (e) => startDrag(e, draggableBox2));
+draggableBox1.addEventListener('touchstart', (e) => startDrag(e, draggableBox1), { passive: false });
+draggableBox2.addEventListener('touchstart', (e) => startDrag(e, draggableBox2), { passive: false });
 
-// Adding click event listeners for buttons on both boxes
-// hideButton1.addEventListener('click', () => handleButtonClick('your_link1.html'));
-img_main_page.addEventListener('click', () => handleButtonClick('projects_vetvi.html'));
+// Блокируем клики по ссылкам внутри draggable блоков при перетаскивании
+const linksInDraggable = document.querySelectorAll('.draggableBox a');
+linksInDraggable.forEach(link => {
+  link.addEventListener('click', preventLinkDuringDrag);
+});
+
+// Для мобильных устройств - обработка img_main_page
+if (typeof img_main_page !== 'undefined' && img_main_page) {
+  img_main_page.addEventListener('click', (e) => {
+    if (!hasMoved) {
+      handleButtonClick('project_Lamoda.html');
+    }
+  });
+}
 
 
 

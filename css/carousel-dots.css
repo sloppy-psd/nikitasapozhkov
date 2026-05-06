@@ -1,0 +1,103 @@
+/* Слайдер с точками в стиле Seed (ssr-carousel-dots) — разный размер изображений, авто-переключение, ручное по точкам */
+
+.carousel-dots-wrapper {
+  width: 100%;
+  margin: 20px 0 30px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.carousel-dots-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-dots-container .carousel {
+  width: 100%;
+  cursor: pointer;
+}
+
+.carousel-dots-container .carousel-cell {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+  background: transparent;
+}
+
+.carousel-dots-container .carousel-cell img {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Контейнер точек — по центру под слайдером */
+.carousel-dots-container .flickity-page-dots {
+  position: relative;
+  bottom: auto;
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.carousel-dots-container .flickity-page-dot {
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.carousel-dots-container .flickity-page-dot:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Активная точка — удлинённая «таблетка» + масштаб (как на Seed) */
+.carousel-dots-container .flickity-page-dot.is-current-selected {
+  width: 24px;
+  border-radius: 4px;
+  background: black;
+  transform: scaleY(1.1);
+}
+
+/* Скрываем текстовый счётчик, если он есть в разметке */
+.carousel-dots-container .carousel-status {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-dots-wrapper {
+    padding: 0 10px;
+    margin: 15px 0 25px;
+  }
+
+  .carousel-dots-container .carousel-cell {
+    min-height: 300px;
+  }
+
+  .carousel-dots-container .flickity-page-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .carousel-dots-container .flickity-page-dot.is-current-selected {
+    width: 18px;
+  }
+}

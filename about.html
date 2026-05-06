@@ -50,9 +50,8 @@
             background-color: transparent;
         }
         
-        /* Стили для таблиц */
+        /* Стили для таблиц (ширина колонок — в style.css, выравнивание с блоком about) */
         .info-table {
-            width: 100%;
             border-collapse: collapse;
             font-size: 17px;
         }
@@ -64,18 +63,11 @@
         }
         
         .info-table .year-column {
-            width: 50px;
             padding-right: 4px;
             font-size: 11px;
             letter-spacing: 0.5px;
             color: rgba(0,0,0,0.8);
-
             font-family: "AlhGrotesque", Arial, sans-serif;
-        }
-        
-        .info-table .detail-column {
-            width: 40%;
-            padding-left: 15px;
         }
         
         .table-divider {
@@ -102,14 +94,9 @@
             }
             
             .info-table .year-column {
-                width: 60px;
                 padding-right: 5px;
             }
             
-            .info-table .detail-column {
-                width: auto;
-                padding-left: 13px;
-            }
         }
     </style>
     <!-- Google tag (gtag.js) -->
@@ -126,58 +113,41 @@
 
 <body class="ab">
 
-      <!-- HEADER 2-->
-<nav class="header2">
-        <div class="header_name_menu">
-            <a href="index.html">Nikita Sapozhkov<br>Type & graphics</a>
-        </div>
-        <div class="header_buttons_menu">
-            <a href="projects.html">Projects</a> <br> <a href="about.html">About</a> 
-        </div>
-        
-
-        <!-- <div class="header_project_name">
-            <a style="color:rgba(255, 255, 255, 0.1) ;">NO PROJECT</a>
-        </div> -->
-
-    </nav>
-    <!-- HEADER 2-->
+    <!-- HEADER будет добавлен автоматически через header.js -->
+    <script src="js/header.js"></script>
 
     <!-- ABOUT -->
     <section class="about_back">
     <div class="about_text">
-        <h1>Nikita Sapozhkov is a type and graphic designer whose expertise involves type development and extensive experimentation in the field. With this experience, he crafts unique wordmarks, letterings, and strong visual systems for brands, special projects, individuals, as well as cultural and art institutions. <br> </h1>
+        <div class="about_text_intro">
+            <h1>Nikita Sapozhkov is a type and graphic designer whose expertise involves type development and extensive experimentation in the field. With this experience, he crafts unique wordmarks, letterings, and strong visual systems for brands, special projects, individuals, as well as cultural and art institutions.</h1>
+        </div>
+        <div class="about_text_block about_text_clients">
+            <span class="about_text_bar"></span>
+            <div class="about_text_block_content">
+                Clients: Thingers, Tuman Studio, Street Beat, Aa-Library, Yandex [Fabrika, Market, Magic Camp, 360]
+            </div>
+        </div>
+        <div class="about_text_social_bar_col3">
+            <span class="about_text_bar"></span>
+        </div>
+        <div class="about_text_block about_text_social">
+            <div class="about_text_block_content">
+                Social Media: <a href="https://sapozhkov.tumblr.com" target="_blank">Tumblr</a>, <a href="https://www.are.na/nikita-sapozhkov/sapozhkovs-do" target="_blank">Are.na</a>, <a href="https://www.instagram.com/nikita_sapozhkov/?hl=en" target="_blank">Instagram</a>, <a href="https://t.me/typefather" target="_blank">Telegram</a>, <a href="https://www.linkedin.com/in/nikita-sapozhkov" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="about_text_block about_text_email">
+            <span class="about_text_bar"></span>
+            <div class="about_text_block_content">
+                Don’t hesitate to reach out:<br>
+                <a href="mailto:info@nikitasapozhkov.com">info@nikitasapozhkov.com</a>
+            </div>
+        </div>
     </div>
-    <div class="contact-info">
-        <h1 style="flex-grow: 6">Don't hesitate to reach out: <a style="color:rgba(255,80,248,0.65);">info@nikitasapozhkov.com</a></h1>
-        <img style="flex-grow: 1" class="ALH-logo" src="img/ns_logo_00.svg">
-    </div>
-
-
-    <!-- SOCIAL MEDIA -->
-    <div class="social-media">
-        
-        <a id="center" href="https://sapozhkov.tumblr.com" target="_blank" style="flex-grow: 4">tumblr</a>
-        <a id="center" href="https://www.are.na/nikita-sapozhkov/sapozhkovs-do" target="_blank" style="flex-grow: 4">Are.na</a>
-        <a id="center" href="https://www.instagram.com/nikita_sapozhkov/?hl=en" target="_blank" style="flex-grow: 4">Instagram</a>
-        <a id="center" href="https://t.me/typefather" target="_blank" style="flex-grow: 4">Telegram</a>
-
-
-
-    </div>
+    <!-- <div class="contact-info about_text_extra">
+        <img class="ALH-logo" src="img/ns_logo_00.svg">
+    </div> -->
     <div class="line"></div>
-    <!-- SOCIAL MEDIA -->
-
-
-    <!-- SELECTED CLIENTS -->
-    <div class="selected-clients">
-        <h1 id="left">
-            <p style="text-align: center; margin: 0; ">Selected clients<br><br>
-                Street beat • Yandex • Aa-Library • Thingers • Tuman Studio</p>
-        </h1>
-    </div>
-    <div class="line"></div>
-    <!-- SELECTED CLIENTS -->
 
 
     <!-- IFORMATION -->
@@ -309,7 +279,7 @@
                     </tr>
                     <tr>
                         <td class="year-column">2017</td>
-                        <td>Image of the Book, Best Book Design</td>
+                        <td>Image of the Book</td>
                         <td class="detail-column">Book about "CoFo Holz"</td>
                     </tr>
                     <tr>
@@ -329,12 +299,12 @@
                     </tr>
                     <tr>
                         <td class="year-column">2016</td>
-                        <td>Image of the Book, Best Book Design</td>
+                        <td>Image of the Book</td>
                         <td class="detail-column">Book "The Old Man and the Sea" by E. Hemingway</td>
                     </tr>
                     <tr>
                         <td class="year-column">2016</td>
-                        <td>Image of the Book, Best Book Design</td>
+                    <td>Image of the Book</td>
                         <td class="detail-column">Design layout For collection of poems by M. Tsvetaeva</td>
                     </tr>
                     <tr>
@@ -359,7 +329,7 @@
                     </tr>
                     <tr>
                         <td class="year-column">2014</td>
-                        <td>Image of the Book, nomination "new names"</td>
+                        <td>Image of the Book</td>
                         <td class="detail-column">Design of the book "my house"</td>
                     </tr>
                 </table>
@@ -373,13 +343,19 @@
     <div class="line"></div>
     <div class="two-column">
         <h1>
-            <p style="text-align: center; margin: 0; font-size: 17px; font-weight: normal; text-transform: uppercase;">Featured in</p><br>
+            <p style="text-align: center; margin: 0; font-size: 17px; font-weight: normal; text-transform: uppercase;">Publications</p><br>
             <div class="expandable-content" id="featured">
                 <table class="info-table">
                     <tr class="table-header">
                         <td class="year-column">YEAR</td>
                         <td>PUBLICATION</td>
                         <td class="detail-column">FORMAT</td>
+                    </tr>
+
+                    <tr>
+                        <td class="year-column">2025</td>
+                        <td><a href="https://contrastfoundry.com/projects/holz-a-contemporary-interpretation-of-victorian-typefaces" target="_blank">Contrast Foundry: CoFo Holz</a></td>
+                        <td class="detail-column">Article</td>
                     </tr>
                     <tr>
                         <td class="year-column">2024</td>

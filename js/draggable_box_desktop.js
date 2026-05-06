@@ -1,43 +1,63 @@
-let isDragging = false;
-let draggedElement = null;
-let offsetX, offsetY;
+let isDraggingDesktop = false;
+let hasMovedDesktop = false; // Флаг для отслеживания реального перемещения
+let draggedElementDesktop = null;
+let offsetXDesktop, offsetYDesktop;
+let startXDesktop, startYDesktop; // Начальные координаты
+const DRAG_THRESHOLD_DESKTOP = 5; // Минимальное расстояние в пикселях
 
-function startDrag(e, element) {
+function startDragDesktop(e, element) {
   e.preventDefault();
-  isDragging = true;
-  draggedElement = element;
-  offsetX = e.clientX - draggedElement.getBoundingClientRect().left;
-  offsetY = e.clientY - draggedElement.getBoundingClientRect().top;
+  isDraggingDesktop = true;
+  hasMovedDesktop = false;
+  draggedElementDesktop = element;
+  
+  startXDesktop = e.clientX;
+  startYDesktop = e.clientY;
+  offsetXDesktop = e.clientX - draggedElementDesktop.getBoundingClientRect().left;
+  offsetYDesktop = e.clientY - draggedElementDesktop.getBoundingClientRect().top;
 
-  document.addEventListener('mousemove', handleDrag);
-  document.addEventListener('mouseup', stopDrag);
+  document.addEventListener('mousemove', handleDragDesktop);
+  document.addEventListener('mouseup', stopDragDesktop);
 }
 
-function handleDrag(e) {
-  if (isDragging) {
-    draggedElement.style.left = e.clientX - offsetX + 'px';
-    draggedElement.style.top = e.clientY - offsetY + 'px';
+function handleDragDesktop(e) {
+  if (isDraggingDesktop) {
+    // Проверяем, превышен ли порог движения
+    const deltaX = Math.abs(e.clientX - startXDesktop);
+    const deltaY = Math.abs(e.clientY - startYDesktop);
+    
+    if (deltaX > DRAG_THRESHOLD_DESKTOP || deltaY > DRAG_THRESHOLD_DESKTOP) {
+      hasMovedDesktop = true;
+    }
+    
+    draggedElementDesktop.style.left = e.clientX - offsetXDesktop + 'px';
+    draggedElementDesktop.style.top = e.clientY - offsetYDesktop + 'px';
   }
 }
 
-function stopDrag() {
-  isDragging = false;
-  draggedElement = null;
-  document.removeEventListener('mousemove', handleDrag);
-  document.removeEventListener('mouseup', stopDrag);
+function stopDragDesktop() {
+  isDraggingDesktop = false;
+  draggedElementDesktop = null;
+  document.removeEventListener('mousemove', handleDragDesktop);
+  document.removeEventListener('mouseup', stopDragDesktop);
+  
+  // Сбрасываем флаг движения через небольшую задержку
+  setTimeout(() => {
+    hasMovedDesktop = false;
+  }, 100);
 }
 
-function handleButtonClick(link) {
+function handleButtonClickDesktop(link) {
   window.location.href = link;
 }
 
 // Adding event listeners for dragging boxes on desktop
-draggableBox1.addEventListener('mousedown', (e) => startDrag(e, draggableBox1));
-draggableBox2.addEventListener('mousedown', (e) => startDrag(e, draggableBox2));
+draggableBox1.addEventListener('mousedown', (e) => startDragDesktop(e, draggableBox1));
+draggableBox2.addEventListener('mousedown', (e) => startDragDesktop(e, draggableBox2));
 
 
 
-function toggleSize(textMessageId, draggableBoxId) {
+function toggleSizeDesktop(textMessageId, draggableBoxId) {
   const textMessage = document.getElementById(textMessageId);
   const draggableBox = document.getElementById(draggableBoxId);
 

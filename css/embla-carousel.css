@@ -1,0 +1,303 @@
+/* Embla Carousel — единые стили для каруселей (замена Flickity) */
+
+/* ---------- Классическая карусель со счётчиком (.carousel-container) ---------- */
+
+.carousel-container {
+  display: block;
+  margin: 20px auto 30px;
+  padding: 0;
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.carousel-container .embla__viewport {
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.carousel-container .embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.carousel-container .embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 570px;
+  background: none;
+}
+
+.carousel-container .embla__slide img {
+  margin: 0;
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.carousel-status {
+  display: block;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  text-align: center;
+  font-family: AlhGrotesque, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: black;
+}
+
+/* Одиночное изображение без слайдера (no-carousel) */
+.no-carousel {
+  display: block;
+  margin: 0 5px 20px;
+  padding: 0;
+  justify-content: center;
+}
+
+.no-carousel .carousel-cell,
+.no-carousel .embla__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.no-carousel img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---------- Карусель с точками (.carousel-dots-container) ---------- */
+
+.carousel-dots-wrapper {
+  width: 100%;
+  margin: 20px 0 30px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.carousel-dots-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-dots-container .embla__viewport {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.carousel-dots-container .embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.carousel-dots-container .embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.carousel-dots-container .embla__slide img {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Точки навигации — внутри блока карусели, белые */
+.carousel-dots-container .embla-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel-dots-container .embla-dot {
+  pointer-events: auto;
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 9999px;
+  background: #fff;
+  cursor: pointer;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-dots-container .embla-dot:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.carousel-dots-container .embla-dot.is-selected {
+  width: 24px;
+  border-radius: 9999px;
+  background: #fff;
+}
+
+.carousel-dots-container .carousel-status {
+  display: none;
+}
+
+/* ---------- Слайдер в сетке 6 колонок (половина / 3 колонки или 2+4) ---------- */
+
+.slider-img-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin: 10px 15px;
+  align-items: start;
+  box-sizing: border-box;
+}
+
+/* Слайдер 3 колонки + изображение 3 колонки */
+.slider-img-row--3-3 .slider-img-row__slider { grid-column: 1 / 4; }
+.slider-img-row--3-3 .slider-img-row__img   { grid-column: 4 / 7; }
+
+/* Слайдер 2 колонки + изображение 4 колонки */
+.slider-img-row--2-4 .slider-img-row__slider { grid-column: 1 / 3; }
+.slider-img-row--2-4 .slider-img-row__img   { grid-column: 3 / 7; }
+
+/* Цитата + картинка: картинка слева (4/6), текст справа (2/6). Этот файл идёт после style.css — иначе правило выше оставляет img справа и ломает ряд. */
+@media screen and (min-width: 769px) {
+  .slider-img-row.quote-module-row.quote-module-row--img-first {
+    grid-template-areas: "qci-img qci-img qci-img qci-img qci-quote qci-quote";
+  }
+
+  .slider-img-row.quote-module-row.quote-module-row--img-first .slider-img-row__img {
+    grid-area: qci-img;
+  }
+
+  .slider-img-row.quote-module-row.quote-module-row--img-first .quote-module-card {
+    grid-area: qci-quote;
+  }
+}
+
+.slider-img-row__slider {
+  min-width: 0;
+  width: 100%;
+}
+
+.slider-img-row__img {
+  min-width: 0;
+  width: 100%;
+}
+
+/* Изображения пропорционально на всю ширину своих колонок */
+.slider-img-row__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+/* Слайдер внутри ячейки — на всю ширину колонки, скругление у контейнера карусели (viewport) */
+.slider-img-row .carousel-dots-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.slider-img-row .carousel-dots-container {
+  max-width: none;
+  width: 100%;
+}
+
+.slider-img-row .carousel-dots-container .embla__viewport {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.slider-img-row .carousel-dots-container .embla__slide {
+  min-height: 280px;
+  width: 100%;
+}
+
+.slider-img-row .carousel-dots-container .embla__slide img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  display: block;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .slider-img-row {
+    grid-template-columns: 1fr;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .slider-img-row.quote-module-row.quote-module-row--img-first {
+    grid-template-areas: none;
+  }
+  .slider-img-row.quote-module-row.quote-module-row--img-first .slider-img-row__img,
+  .slider-img-row.quote-module-row.quote-module-row--img-first .quote-module-card {
+    grid-area: auto;
+  }
+  .slider-img-row--3-3 .slider-img-row__slider,
+  .slider-img-row--3-3 .slider-img-row__img,
+  .slider-img-row--2-4 .slider-img-row__slider,
+  .slider-img-row--2-4 .slider-img-row__img {
+    grid-column: 1 / -1;
+  }
+  .slider-img-row .carousel-dots-container .embla__slide {
+    min-height: 240px;
+  }
+}
+
+/* ---------- Адаптивность ---------- */
+
+@media screen and (max-width: 1200px) {
+  .carousel-container { width: 85%; }
+  .carousel-container .embla__slide { height: 500px; }
+}
+
+@media screen and (max-width: 992px) {
+  .carousel-container { width: 90%; }
+  .carousel-container .embla__slide { height: 450px; }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .carousel-container .embla__slide { height: 400px; }
+
+  .carousel-dots-wrapper { padding: 0 10px; margin: 15px 0 25px; }
+  .carousel-dots-container .embla__slide { min-height: 300px; }
+  .carousel-dots-container .embla-dot { width: 6px; height: 6px; }
+  .carousel-dots-container .embla-dot.is-selected { width: 18px; }
+  .carousel-dots-container .embla-dots { bottom: 14px; }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-container { width: 100%; }
+  .carousel-container .embla__slide { height: 350px; }
+}

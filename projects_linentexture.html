@@ -15,14 +15,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
     <link rel="manifest" href="site.webmanifest?v=1">
     <!-- FAVICON -->
-    <!-- FLICKITY -->
-    <link rel="stylesheet" type="text/css" href="/flickity-style.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
-    <!-- FLICKITY -->
+    <!-- Embla Carousel -->
+    <link rel="stylesheet" href="css/embla-carousel.css">
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+    <!-- Embla Carousel -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8H40FY6868"></script>
 <script>
@@ -33,10 +30,11 @@
   gtag('config', 'G-8H40FY6868');
 </script>
     <script src="js/cookie-consent.js?v=1.0"></script>
+    <script src="js/types-description-sep.js"></script>
     <script src="js/footer.js"></script>
 </head>
 
-<body>
+<body data-header-project="Linen Texture">
     <!-- Cookie Consent -->
    
               <script src="js/script_description.js"></script>
@@ -44,47 +42,8 @@
 
 
 
-<!-- HEADER 2 -->
-
-
-<nav class="header2">
-        <div class="header_name_menu">
-            <a href="index.html">Nikita Sapozhkov<br>Type & graphics</a>
-        </div>
-        <div class="header_buttons_menu">
-            <a href="projects.html">Projects</a> <br> <a href="about.html">About</a> 
-        </div>
-        
-
-        <div class="header_project_name">
-            <a >Linen Texture</a>
-        </div>
-
-
-
-<!-- DESCRIPTION AND TAGS IN HEADER -->
-
-<!--         <div id="toggleContentButton" onclick="toggleContent()">↑
-</div>
-
-
-  <div id="contentBlock">
-<div class="projects_description" id="descriptionBlock">
-            <a>Vetvi Flowers is a floral concept store - there are no ready-made solutions for bouquets, individuality comes first. All people are different and the approach to each of them is personal — everyone has their own bouquet. The logo is based on the idea of layering and dynamics: the smooth lines of the second layer grow into the first, emphasizing the brand name — "Vetvi".</a>
-        </div>
-
-<div class="projects_tag" id="tagBlock">
-            <a>Category: Visual identity • Client: Vetvi Flowers • Typeface: CoFo Sans</a>
-        </div>  
-    </div> -->
-
-<!-- DESCRIPTION AND TAGS IN HEADER -->
-
-
-    </nav>
-
-
-<!-- HEADER 2 — END -->
+<!-- HEADER будет добавлен автоматически через header.js -->
+    <script src="js/header.js"></script>
 
 
 
@@ -95,14 +54,6 @@
 
     
 
- <!-- VIDEO CONTAINER -->
-<!-- <div id="videoContainer">
-  <video autoplay loop muted playsinline>
-    <source src="img/LinenTexture/linentexture_video_main.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div> -->
- <!-- VIDEO CONTAINER -->
     <!-- FULL WIDTH IMAGE -->
     <div class="fullWidth_img_box">
         <img  src="img/LinenTexture/linentexture-full_01.png" alt="ns_linentexture_main_00">
@@ -111,18 +62,6 @@
 
 
 
-    <!-- MAIN IMAGE -->
- <!--    <div class="main_img_box">
-        <img src="img/vetvi/vetvi-motion.gif" alt="vetvi-main">
-    </div> -->
-    <!-- MAIN IMAGE -->
-
-    
-    <!-- PROJECT NAME -->
-<!-- <div class="project_name">
-        <h1>Vetvi Flowers</h1>
-    </div> -->
-        <!-- PROJECT NAME -->
 
     
     <!-- PROJECT CAPTION -->
@@ -148,110 +87,61 @@ The recently unveiled logo signifies a bold step in redefining Linen Texture's i
 
 
     <!------------------------------------------ PROJECT MAIN CONTENT ------------------------------------------>
-    <!-- FULL WIDTH IMAGE -->
-   <!--  <div class="main_img_box">
-        <img src="img/LinenTexture/linentexture-full_00.png" alt="linentexture-full_00.png">
-    </div> -->
-    <!-- FULL WIDTH IMAGE -->
 
-    <!-- TWO BIG IMAGES -->
-    <div class="two_img_box">
-        <img src="img/LinenTexture/linentexture_half_00.png" alt="linen-half_02.png">
-        <img src="img/LinenTexture/linentexture_half_01.png" alt="linen-half_02.png">
+
+     <!-- TWO IMAGES -->
+<div class="two_img_box" style="gap: 10px; margin-bottom: 10px; margin-top: 5px;">
+    <div class="half" style="width: calc(50% - 5px);">
+        <img src="img/LinenTexture/linentexture_half_00.png" alt="linen-half_02.png" style="width: 100%; padding: 0; display: block;">
+        <!-- <div class="half_caption">Old (2019)</div> -->
     </div>
-    <!-- TWO BIG IMAGES -->
-
-    <!--IMAGES CAPTIONS-->
-  <!--   <div class="project_noneback">
-        <h2 class="types">
-            The wordmark system in use
-        </h2>
-    </div> -->
-    <!--IMAGES CAPTIONS-->
-    
-
- <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
-    <!-- CAROUSEL -->
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="carousel-cell">
-                <img src="img/LinenTexture/linentexture-full_00.png" alt="LinenTexture-sl-00">
-            </div>
-            <!-- <div class="carousel-cell">
-                <img src="img/vetvi/vetvi-slider_01.png" alt="vetvi-sl-01">
-            </div>
-            <div class="carousel-cell">
-                <img src="img/vetvi/vetvi-slider_02.png" alt="vetvi-sl-02">
-            </div> -->
-        </div>
-        <p class="carousel-status"></p>
+    <div class="half" style="width: calc(50% - 5px);">
+        <img src="img/LinenTexture/linentexture_half_01.png" alt="linen-half_02.png" style="width: 100%; padding: 0; display: block;">
+        <!-- <div class="half_caption">Old (2019)</div> -->
     </div>
-    <!-- !!!!!!!!!     FLICKITY SLIDER     !!!!!!!!! -->
-    
-    <!--IMAGES CAPTIONS-->
- <!--    <div class="project_noneback">
-        <h2 class="types">
-            Starting with sketching
-        </h2>
-    </div> -->
-    <!--IMAGES CAPTIONS-->
+ </div>
+ <!-- TWO IMAGES -->
 
-    <!-- FULL WIDTH IMAGE -->
-   <!--  <div class="main_img_box">
-        <img src="img/vetvi/vetvi-sketches.jpg" alt="vetvi-sketches">
-    </div> -->
-    <!-- FULL WIDTH IMAGE -->
-    
-    <!--IMAGES CAPTIONS-->
-   <!--  <div class="project_noneback">
-        <h2 class="types">
-            The first main layer
-        </h2>
-    </div> -->
-    <!--IMAGES CAPTIONS-->
 
-    <!-- CAROUSEL -->
-    <!-- <div class="no-carousel">
-        <div class="carousel-cell">
-            <img src="img/vetvi/vetvi-slider_00.png" alt="vetvi-sl-00">
+
+ 
+ 
+  <!-- FULL WIDTH IMAGE -->
+  <div class="main_img_box" style="margin-top: 10px;">
+    <img src="img/LinenTexture/linentexture-full_00.png" alt="LinenTexture-sl-00">
+</div>
+<!-- FULL WIDTH IMAGE -->
+    
+
+
+
+     <!-- TWO IMAGES -->
+     <div class="two_img_box" style="gap: 10px; margin-bottom: 10px; margin-top: 5px;">
+        <div class="half" style="width: calc(50% - 5px);">
+            <img src="img/LinenTexture/linentexture_half_02.png" alt="LinenTexture-Half_02" style="width: 100%; padding: 0; display: block;">
+            <!-- <div class="half_caption">Old (2019)</div> -->
         </div>
-    </div> -->
-    <!-- CAROUSEL -->
-
-
-    <!--IMAGES CAPTIONS-->
-   <!--  <div class="project_noneback">
-        <h2 class="types">
-            The second layer (system and variations)
-        </h2>
-    </div> -->
-    <!--IMAGES CAPTIONS-->
+        <div class="half" style="width: calc(50% - 5px);">
+            <img src="img/LinenTexture/linentexture_half_03.png" alt="LinenTexture-Half_03" style="width: 100%; padding: 0; display: block;">
+            <!-- <div class="half_caption">Old (2019)</div> -->
+        </div>
+     </div>
+     <!-- TWO IMAGES -->
 
 
 <!-- IMAGE CAPTION -->
-    <div class="project_caption">
-        <figcaption class="tag_types">
-            <li>Left</li>
-            <li>Right</li>
-        </figcaption>
-        <figcaption class="tag_info" >
-            <li>Main logotype layer</li>
-            <li>Graphic layers</li>
-        
-        </figcaption>
-        <!-- <h1 class="types-description">
-            Award <br> Tokyo TDC. Honored for typographic excellence.</h1>
- -->    </div>
-    <!-- IMAGE CAPTION -->
-
-
-<!-- TWO BIG IMAGES -->
-    <div class="two_img_box">
-        <img src="img/LinenTexture/linentexture_half_02.png" alt="LinenTexture-Half_02">
-        <img src="img/LinenTexture/linentexture_half_03.png" alt="LinenTexture-Half_03">
-    </div>
-    <!-- TWO BIG IMAGES -->
-
+<div class="project_caption">
+    <figcaption class="tag_types">
+        <li>Left</li>
+        <li>Right</li>
+    </figcaption>
+    <figcaption class="tag_info" >
+        <li>Hand drawn description</li>
+        <li>Typography</li>
+    
+    </figcaption>
+</div>
+<!-- IMAGE CAPTION -->
 
 
     <!-- CAROUSEL -->
@@ -276,7 +166,7 @@ The recently unveiled logo signifies a bold step in redefining Linen Texture's i
     <!-- CAROUSEL -->
 
     <!---------------------------- CAROUSEL COUNTER ---------------------------->
-    <script type="text/javascript" src="carousel-counter.js"></script>
+    <script src="js/embla-carousel.js"></script>
     <!---------------------------- CAROUSEL COUNTER ---------------------------->
     
 

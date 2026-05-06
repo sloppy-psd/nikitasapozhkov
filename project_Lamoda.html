@@ -15,14 +15,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
     <link rel="manifest" href="site.webmanifest?v=1">
     <!-- FAVICON -->
-    <!-- FLICKITY -->
-    <link rel="stylesheet" type="text/css" href="/flickity-style.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
-    <!-- FLICKITY -->
+    <!-- Embla Carousel -->
+    <link rel="stylesheet" href="css/embla-carousel.css">
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+    <!-- Embla Carousel -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8H40FY6868"></script>
 <script>
@@ -33,10 +30,11 @@
   gtag('config', 'G-8H40FY6868');
 </script>
     <script src="js/cookie-consent.js?v=1.0"></script>
+    <script src="js/types-description-sep.js"></script>
     <script src="js/footer.js"></script>
 </head>
 
-<body>
+<body data-header-project="Lamoda">
     <!-- Cookie Consent -->
    
               <script src="js/script_description.js"></script>
@@ -44,23 +42,8 @@
 
 
 
-<!-- HEADER 2 -->
-
-
-<nav class="header2">
-        <div class="header_name_menu">
-            <a href="index.html">Nikita Sapozhkov<br>Type & graphics</a>
-        </div>
-        <div class="header_buttons_menu">
-            <a href="projects.html">Projects</a> <br> <a href="about.html">About</a> 
-        </div>
-        
-
-        <div class="header_project_name">
-            <a >Lamoda</a>
-        </div>
-</nav>
-<!-- HEADER 2 — END -->
+<!-- HEADER будет добавлен автоматически через header.js -->
+    <script src="js/header.js"></script>
 
 <section class="about_back">
 
@@ -90,12 +73,9 @@
         
         </figcaption>
         <h1 class="types-description">
-Lamoda is a platform where authentic products, personalized service, and
-fashion expertise help customers discover their style and express their
-individuality.<br>
-Today, lamoda is redefining its role: to be a guide into the world of fashion and individual style through technology, content, and a curated assortment. 
 Lamoda is a platform where authentic products, personalized service, and fashion expertise help customers discover their style and express their individuality. 
-These changes are happening gradually and are now reflected in the restyling of the brand identity.
+‖ Today, lamoda is redefining its role: to be a guide into the world of fashion and individual style through technology, content, and a curated assortment. 
+Lamoda is a platform where authentic products, personalized service, and fashion expertise help customers discover their style and express their individuality. These changes are happening gradually and are now reflected in the restyling of the brand identity.
 </h1>
     </div>
     <!-- PROJECT CAPTION -->
@@ -137,37 +117,48 @@ These changes are happening gradually and are now reflected in the restyling of 
 
  
 
-<!-- FULL WIDTH IMAGE -->
-<div class="main_img_box" style="margin-top: 10px;">
-    <img src="img/lamoda/Lamoda_full_01.png" alt="clansix-full_00.png">
+
+
+
+ <!-- QUOTE + изображение (2+4 как у карусели). Картинка слева: добавьте quote-module-row--img-first к этому div. Без картинки: уберите slider-img-row--2-4 и блок slider-img-row__img. -->
+ <div class="slider-img-row slider-img-row--2-4 quote-module-row quote-module-row--img-first">
+    <section class="quote-module-card" aria-label="Quote module">
+        <h2 class="quote-module-card__title">The logo was refined to align with the updated visual direction of the brand while preserving the familiar proportions and character of the original mark.
+            Subtle reverse contrast references the historic version of the logo, while small optical adjustments improve clarity across different sizes and inverted applications</h2>
+        <div class="quote-module-card__footer">
+            <span class="quote-module-card__label">Refinement</span>
+        </div>
+    </section>
+    <div class="slider-img-row__img">
+        <img src="img/lamoda/Lamoda_full_01.png" alt="Lamoda_design_dots">
+    </div>
+</div>
+<!-- QUOTE CARD MODULE -->
+
+
+      <!-- FULL WIDTH IMAGE -->
+<div class="main_img_box" style="margin-top: 0px;">
+    <img src="img/lamoda/Lamoda_full_02.webp" alt="clansix-full_00.png">
 </div>
 <!-- FULL WIDTH IMAGE -->
-
 
     <!-- PROJECT CAPTION -->
     <div class="project_caption">
         <figcaption class="tag_types">
             <li> Main it is Square</li>
-            
-        </figcaption>
-        <figcaption class="tag_info" >
-            <li> </li>
-            
+            </figcaption>
         
-        </figcaption>
+            <figcaption class="tag_info" >
+            <li> </li>
+            </figcaption>
+            
         <h1 class="types-description">
             The square module has become the unifying thread of the identity, 
             echoing patterns found in many fashion brands. 
             This symbol was used to create a flexible system of patterns, typographic techniques, photographic style elements, and the logo mark.
-</h1>
+        </h1>
     </div>
     <!-- PROJECT CAPTION -->
-
-      <!-- FULL WIDTH IMAGE -->
-<div class="main_img_box" style="margin-top: 30px;">
-    <img src="img/lamoda/Lamoda_full_02.webp" alt="clansix-full_00.png">
-</div>
-<!-- FULL WIDTH IMAGE -->
 
   <!-- TWO VIDEOS -->
   <div class="two_img_box" style="gap: 10px; margin-bottom: 10px; margin-top: 5px;">
@@ -218,11 +209,7 @@ These changes are happening gradually and are now reflected in the restyling of 
  </div>
  <!-- TWO VIDEOS -->
 
- <!-- FULL WIDTH IMAGE -->
- <!-- <div class="fullWidth_img_box">
-    <img  src="img/lamoda/05_GIRL.png" alt="ns_lamoda_main_00">
-    </div> -->
-<!-- FULL WIDTH IMAGE -->
+
 
 <!-- FULL WIDTH IMAGE -->
 <div class="main_img_box" style="margin-top: 10px;">

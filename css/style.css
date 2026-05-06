@@ -73,6 +73,7 @@ padding-right: 15px;
 padding-top: 15px;
 padding-bottom: 10px;
 width: 100%;
+-webkit-font-smoothing: antialiased;
 /*border-bottom: black 0.5px solid;*/
 /*border-radius: 0px 0px 15px 15px;*/
 }
@@ -80,23 +81,28 @@ width: 100%;
 /*HEADER — 2*/
 
 .header2 {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   position: fixed;
   z-index: 900;
-  overflow: hidden;
+  overflow: visible;
   background: rgba(57,255,88,0.85);
+  /* background: rgba(59, 79, 255, 0.85); */
+
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  box-sizing: content-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  top: 0;
+  top: 30px;
   left: 20%;
   right: 20%;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 8px;
+  padding-left: 30px;
+  padding-right: 8px;
+  padding-top: 5px;
   padding-bottom: 5px;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 9999px;
 }
 
 @media screen and (max-width: 1265px) {
@@ -110,6 +116,7 @@ width: 100%;
   .header2 {
     left: 0;
     right: 0;
+    top: 0;
   }
 }
 /*@media screen and (max-width: 640px) {
@@ -122,24 +129,26 @@ width: 100%;
 
 
 .header_name_menu {
+  flex-shrink: 0;
   display: inline-block;
-  font-size: 15px;
+  font-size: 20px;
   font-family: AlhGrotesque;
   font-weight: normal;
-  line-height: 15px;
+  line-height: 0.9;
   min-width: 200px;
-  text-transform: uppercase;
+  text-transform: none;
   color: black;
   background-color: none;
   text-decoration: none;
   vertical-align: baseline;
-  letter-spacing: 1px;
+  letter-spacing: -0.3px;
+  margin-right: 0px;
 }
 
 @media screen and (max-width: 810px) {
   .header_name_menu {
-    font-size: 13px;
-    line-height: 13px;
+    font-size: 18px;
+    line-height: 1.0;
     margin-right: 10px;
     min-width: 150px;
   }
@@ -147,8 +156,8 @@ width: 100%;
 
 @media screen and (max-width: 640px) {
   .header_name_menu {
-    line-height: 13px;
-    font-size: 13px;
+    line-height: 1.0;
+    font-size: 16px;
     margin-right: 10px;
     min-width: 150px;
   }
@@ -156,8 +165,8 @@ width: 100%;
 
 @media screen and (max-width: 570px) {
   .header_name_menu {
-    line-height: 13px;
-    font-size: 13px;
+    line-height: 1.0;
+    font-size: 16px;
     margin-right: 10px;
     min-width: 150px;
     font-family: AlhGrotesque-Medium, Times;
@@ -166,51 +175,59 @@ width: 100%;
 
 
 
-/*HEADER BUTTONS MENU*/
+/*HEADER BUTTONS MENU — в одну строку, прижато к правому краю */
 .header_buttons_menu {
-  display: inline-block;
-  font-size: 15px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-left: auto;
+  margin-right: 0px;
+  font-size: 20px;
   font-family: AlhGrotesque, Times;
   font-weight: normal;
-  line-height: 15px;
-  text-transform: uppercase;
+  line-height: 1.0;
+  text-transform: none;
 }
 
-.header_buttons_menu a {
+.header_buttons_menu .header-nav-link {
+  display: inline-block;
   color: black;
-  background-color: none;
   text-decoration: none;
-  vertical-align: baseline;
-  letter-spacing: 1px;
+  letter-spacing: -0.3px;
+  padding: 15px 14px;
+  border-radius: 9999px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.header_buttons_menu a:hover {
-  color: white;
-  background-color: none;
-  text-decoration: none;
+.header_buttons_menu .header-nav-link:hover {
+  background: white;
+  color: black;
+}
+
+.header_buttons_menu .header-nav-link.header-nav-link-active {
+  background: white;
+  color: black;
 }
 
 
 @media screen and (max-width: 810px) {
   .header_buttons_menu {
-    font-size: 13px;
-    line-height: 13px;
-    margin-right: 10px;
+    font-size: 18px;
+    line-height: 1.0;
   }
 }
 @media screen and (max-width: 640px) {
   .header_buttons_menu {
-    font-size: 13px;
-    line-height: 13px;
-    margin-right: 10px;
+    font-size: 16px;
+    line-height: 1.0;
   }
 }
 
 @media screen and (max-width: 570px) {
   .header_buttons_menu {
-    line-height: 13px;
-    font-size: 13px;
-    margin-right: 10px;
+    line-height: 1.0;
+    font-size: 16px;
     font-family: AlhGrotesque-Medium, Times;
   }
 }
@@ -223,33 +240,37 @@ width: 100%;
 
 
 .header_project_name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: HolzMono, Times;
   font-weight: normal;
-  font-size: 41px;
-  display: inline-block;
+  font-size: 41px; /* задаётся JS по высоте 2 строк имени */
   text-transform: uppercase;
   color: black;
-  vertical-align: baseline;
-  line-height: 13px;
+  line-height: 1.2;
+  min-width: 0;
+  padding-top: 6px; /* оптическая центровка по вертикали внутри плашки */
+  pointer-events: none; /* клики проходят к кнопкам/имени под текстом */
 }
 
 @media screen and (max-width: 810px) {
   .header_project_name {
-    font-size: 31px;
-    line-height: 13px;
+    line-height: 1.2;
   }
 }
 @media screen and (max-width: 640px) {
   .header_project_name {
-    font-size: 31px;
-    line-height: 13px;
+    line-height: 1.2;
   }
 }
 
 @media screen and (max-width: 570px) {
   .header_project_name {
-    line-height: 13px;
-    font-size: 13px;
+    line-height: 1.2;
     letter-spacing: 1px;
     margin-right: 0px;
     vertical-align: top;
@@ -1144,7 +1165,7 @@ font-weight: normal;
 
 /*PROJECTS LIST*/
 .projects-list{
-  margin-top: 60px; 
+  margin-top: 120px; 
   margin-left: 5px;
   margin-right: 5px;
   
@@ -1232,9 +1253,10 @@ margin:0;
 
 }
 
-.footer a, div{ 
+.foot a,
+.foot div {
   margin-right: 40px;
- }
+}
 .social > a { 
   display: block;
   margin-right: 40px;
@@ -1271,25 +1293,327 @@ color: #008B4B;
 
 /*FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 FOOTER-2 */
 
-.foot{
-
+.foot {
   position: fixed;
-/*display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   bottom: 0;
   width: 100%;
-  height: 350px;  
-  
-  margin-top: 10px;
-  margin-left: 0px;
-  margin-bottom: 0px;
-  margin-right: 0px;
+  height: 350px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  margin: 0;
   background-color: #F5F5F5;
+  -webkit-font-smoothing: antialiased;
+  overflow: visible;
+  --footer-bar-height: calc(2em * 1.15 + 4px);
 }
 
+/* Плашка во всю ширину экрана у самого низа, высота 20px */
+.foot::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+}
 
+/* Новая grid-структура футера - десктоп (6 колонок) */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: end;
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 0;
+  overflow: visible;
+}
 
+/* Колонка 1-2: Мотто (белая плашка от края внешней плашки до начала блока) */
+.footer-slogan {
+  grid-column: 1 / 3;
+  position: relative;
+  overflow: visible;
+}
+
+.footer-slogan::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  width: 15px;
+  height: var(--footer-bar-height);
+  background-color: white;
+}
+
+.footer-slogan p {
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.1px;
+}
+
+/* Колонка 3: пустая */
+.footer-empty {
+  grid-column: 3;
+}
+
+/* Колонка 4: Соцсети — текст от начала 4-й колонки, плашка ровно по ширине колонок 2–3 */
+.footer-social {
+  grid-column: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  padding-left: 0;
+  overflow: visible;
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-social::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  width: 200%;
+  height: var(--footer-bar-height);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.footer-social a {
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.1px;
+}
+
+/* Колонка 5: Email */
+.footer-email {
+  grid-column: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  padding-left: 0;
+  overflow: visible;
+}
+
+/* Плашка слева от текста Email, примыкает к левой границе колонки 5 */
+.footer-email::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  left: auto;
+  bottom: 0;
+  width: 55px;
+  height: var(--footer-bar-height);
+  background-color: white;
+  z-index: 1;
+}
+
+/* Колонка 6: Копирайт (Privacy Policy) — текст строго от начала 6-й колонки; плашка целиком слева от 6-й (правый край плашки = левая граница колонки 6, в колонку 6 не заходит) */
+.footer-copyright {
+  grid-column: 6;
+  position: relative;
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* Плашка: правый край у левой границы колонки 6, ширина 40px, внутрь колонки 6 не заходит */
+.footer-copyright::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  left: auto;
+  bottom: 0;
+  width: 40px;
+  height: var(--footer-bar-height);
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+.footer-col {
+  font-family: AlhGrotesque, sans-serif;
+  font-weight: normal;
+  color: black;
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  line-height: 1.15;
+}
+
+.footer-col p {
+  margin: 0;
+}
+
+.footer-col a {
+  color: black;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-col a:hover {
+  opacity: 0.5;
+}
+
+.footer-email .footer-label {
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.1px;
+}
+
+.footer-email-link {
+  font-size: 14px;
+  color: black;
+  line-height: 1.15;
+  letter-spacing: 0.1px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-email-link:hover {
+  opacity: 0.5;
+}
+
+/* Копирайт */
+.footer-copyright {
+  text-align: left;
+}
+
+.footer-copyright p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.1px;
+}
+
+.footer-copyright a {
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.1px;
+}
+
+/* Медиа-запросы для нового футера */
+
+/* Планшет */
+@media screen and (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto;
+    gap: 0;
+  }
+  
+  /* Мотто: колонки 1-3 */
+  .footer-slogan {
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+  }
+  
+  /* Размер шрифта управляется JS */
+  
+  /* Пустая колонка скрыта */
+  .footer-empty {
+    display: none;
+  }
+  
+  /* Соцсети: колонка 4 */
+  .footer-social {
+    grid-column: 4;
+    grid-row: 1 / 3;
+  }
+  
+  /* Email: колонки 5-6, первая строка */
+  .footer-email {
+    grid-column: 5 / 7;
+    grid-row: 1;
+    margin-bottom: 1.3em;
+  }
+  
+  /* Копирайт: колонки 5-6, вторая строка */
+  .footer-copyright {
+    grid-column: 5 / 7;
+    grid-row: 2;
+  }
+}
+
+/* Мобильный */
+@media screen and (max-width: 640px) {
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 20px 0;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Уменьшаем шрифт для мобильной версии */
+  .footer-col,
+  .footer-col a,
+  .footer-col p,
+  .footer-slogan p,
+  .footer-email .footer-label,
+  .footer-email-link,
+  .footer-copyright p,
+  .footer-copyright a,
+  .footer-social a {
+    font-size: 11px;
+  }
+  
+  .footer-empty {
+    display: none;
+  }
+  
+  /* Мотто: все 6 колонок */
+  .footer-slogan {
+    grid-column: 1 / 7;
+    grid-row: 1;
+  }
+  
+  /* Соцсети: колонки 1-2, под мотто */
+  .footer-social {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    justify-self: start;
+  }
+  
+  /* Email: от центра (колонка 4), под мотто */
+  .footer-email {
+    grid-column: 4 / 7;
+    grid-row: 2;
+    justify-self: start;
+    min-width: 0;
+    word-break: break-all;
+    margin-bottom: 0;
+  }
+  
+  /* Копирайт: от центра (колонка 4), под email */
+  .footer-copyright {
+    grid-column: 4 / 7;
+    grid-row: 3;
+    justify-self: start;
+    min-width: 0;
+  }
+  
+  .foot {
+    height: auto;
+    min-height: 200px;
+    padding-bottom: 20px;
+  }
+}
 
 
 
@@ -1297,24 +1621,18 @@ color: #008B4B;
 .footer-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding: 0px;
     margin-right: 0px;
-
 }
 
 .footer-info_2 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding: 0px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     width: 100%;
     margin-right: 0px;
-
 }
 
 .footer-info_2 h1 { 
@@ -1323,36 +1641,39 @@ color: #008B4B;
     font-weight: normal;
     color: black;
     font-size: 17px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-transform: none;
     margin-right: 20px;
     line-height: 22px;
     padding-left: 15px;
-    margin-top: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .footer-info_2 a {
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
+    color: black;
+    text-decoration: none;
     font-family: AlhGrotesque;
     font-weight: normal;
-    color: black;
     font-size: 17px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer-info_2 a:hover {
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 811px) {
     .footer-info_2 h1 { 
         font-size: 19px;
-        letter-spacing: 1px;
-        line-height: 17px;
+        letter-spacing: 0.5px;
+        line-height: 20px;
     }
     .footer-info_2 a {
         font-size: 19px;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
     }
 }
 
@@ -1367,7 +1688,7 @@ color: #008B4B;
         font-size: 15px;  
         padding: 0px;
         margin: 0px;
-        margin-top: 15px;
+        margin-bottom: 15px;
     }
     .footer-info_2 a {
         font-size: 15px;
@@ -1381,19 +1702,20 @@ color: #008B4B;
 
   color: black;
   font-size: 17px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-transform: none;
   margin-right: 20px;
   line-height: 22px;
   padding-left: 15px;
-  margin-top: 25px;
+  margin-top: 0;
+  margin-bottom: 10px;
  }
 
 @media screen and (max-width: 811px) {
   .footer-info h1{ 
   font-size: 19px;
-  letter-spacing: 1px;
-  line-height: 17px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
   }
 }
 
@@ -1415,7 +1737,7 @@ width: 100%;
   font-size: 15px;  
 padding: 0px;
 margin: 0px;
-margin-top: 15px;
+margin-bottom: 15px;
 /*background-color: greenyellow;*/
 }
 
@@ -1531,55 +1853,189 @@ outline: none;
 
 
 
-/*ABOUT*/
-.about_text{
-  display: flex;
-  margin-top: 60px; 
-  margin-left: 5px;
-  margin-right: 5px;
+/*ABOUT — 6 колонок как футер, скруглённая плашка */
+.about_text {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0 0;
+  margin-top: 120px;
+  margin-left: 15px;
+  margin-right: 15px;
   border-radius: 15px;
-  background-color:#F5F5F5;
-/*  background-color:#f7f7f7;*/
-
-  padding-left: 10px;
-  padding-right: 10px;
+  background-color: #F5F5F5;
+  padding: 30px 0 0 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
-.about_text h1 {
-font-family: HolzMono, Times;
-font-weight: normal;
-font-size: 30px;
-text-align: center;
-text-transform: uppercase;
-color: black;
+/* Текст about на все 6 колонок, центральная выключка */
+.about_text_intro {
+  grid-column: 1 / -1;
+  margin-bottom: 28px;
+}
 
+.about_text_intro h1 {
+  font-family: HolzMono, Times;
+  font-weight: normal;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  line-height: 1.0;
+  margin: 0;
+}
+
+/* Блоки Clients, Social Media, Email — с чёрной полоской слева */
+.about_text_block {
+  display: flex;
+  align-items: flex-start;
+  gap: 1px;
+  min-width: 0;
+}
+
+/* Clients: колонки 1–2, bar от левого края плашки (padding у плашки убран) */
+.about_text_clients {
+  grid-column: 1 / 3;
+  box-sizing: border-box;
+}
+
+.about_text_clients .about_text_bar {
+  flex: 0 0 25%;
+  width: 25%;
+  min-width: 8px;
+  height: 56px;
+  background-color: black;
+  display: block;
+  box-sizing: border-box;
+}
+
+.about_text_clients .about_text_block_content {
+  flex: 0 1 auto;
+}
+
+/* Social Media: bar в колонке 3, полностью заполняет её по ширине */
+.about_text_social_bar_col3 {
+  grid-column: 3 / 4;
+  min-width: 0;
+}
+
+.about_text_social_bar_col3 .about_text_bar {
+  width: 100%;
+  min-width: 100%;
+  height: 56px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.about_text_social {
+  grid-column: 4 / 6;
+}
+
+.about_text_social .about_text_block_content {
+  min-width: 0;
+  
+}
+
+/* Email: bar у начала колонки 6 */
+.about_text_email {
+  grid-column: 6 / 7;
+}
+
+.about_text_email .about_text_bar {
+  flex: 0 0 25%;
+  width: 25%;
+  min-width: 8px;
+  height: 56px;
+  background-color: black;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Общие стили bar (базовые, переопределяются выше) */
+.about_text_bar {
+  flex-shrink: 0;
+  width: 8px;
+  height: 56px;
+  background-color: black;
+  display: block;
+}
+
+.about_text_block_content {
+  font-family: AlhGrotesque, Times;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.3);
+  line-height: 1.0;
+  letter-spacing: -0.2px;
+}
+
+.about_text_block_content a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.about_text_block_content a:hover {
+  opacity: 0.7;
+}
+
+.about_text_label {
+  display: block;
+  margin-bottom: 4px;
 }
 
 @media screen and (max-width: 811px) {
-.about_text{
-  margin-top: 80px; 
- 
-}
-.about_text h1{
-font-size: 17px;
-}
+  .about_text {
+    margin-top: 80px;
+    grid-template-columns: 1fr;
+    padding: 20px 0 0 0;
+  }
+  .about_text_intro {
+    margin-bottom: 20px;
+  }
+  .about_text_intro h1 {
+    font-size: 17px;
+  }
+  .about_text_clients,
+  .about_text_social_bar_col3,
+  .about_text_social,
+  .about_text_email {
+    grid-column: 1 / -1;
+    margin-top: 16px;
+    margin-left: 0;
+    padding-left: 0;
+    
+  }
+  .about_text_social_bar_col3 .about_text_bar {
+    width: 8px;
+  }
+  .about_text_clients .about_text_bar {
+    flex: none;
+    width: 8px;
+    min-width: 8px;
+  }
 }
 
 .contact-info{
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-
-  margin-top: -25px; 
+  margin-top: -25px;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 15px;
   background-color: #F5F5F5;
-/*  background-color: blue;*/
-
   padding-top: 25px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.contact-info.about_text_extra {
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .contact-info h1 {
@@ -1742,30 +2198,37 @@ border-radius: 15px;
 
 
 
-.two-column{
-display: flex;
-flex-wrap: wrap;
-  /*align-items: stretch;*/
-justify-content: center;
-  margin-top: 20px; 
-  margin-left: 5px;
-  margin-right: 5px;
+/* Сетка 6 колонок как в блоке about: Talks/Publications — 1–3, Nominations/Exhibitions — 4–6 */
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-sizing: border-box;
+}
 
+.two-column > h1:nth-child(1) { grid-column: 1 / 4; }
+.two-column > h1:nth-child(3) { grid-column: 4 / 7; }
+.two-column > h1:nth-child(5) { grid-column: 1 / 4; }
+.two-column > h1:nth-child(7) { grid-column: 4 / 7; }
+
+.two-column > .line-hidden {
+  grid-column: 1 / -1;
 }
 
 .two-column h1 {
-flex-wrap: wrap;
-
-font-family: HolzMono, Times;
-font-weight: normal;
-font-size: 20px;
-text-transform: uppercase;
-color: black;
-width: 50%;
-/*min-width: 30%;*/
-margin: 0;
-
- }
+  flex-wrap: wrap;
+  font-family: HolzMono, Times;
+  font-weight: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: black;
+  width: 100%;
+  margin: 0;
+  min-width: 0;
+}
 
 @media screen and (max-width: 811px) {
 .two-column h1{
@@ -1943,6 +2406,121 @@ flex-wrap: wrap;
   }
 }
 
+/* Quote card module — 2 колонки сетки как .slider-img-row--2-4 .slider-img-row__slider, скругление как у карусели (15px) */
+.quote-module-row {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Картинка слева для quote-module-row--img-first: см. grid-template-areas в embla-carousel.css (подключается после этого файла). */
+
+.quote-module-card {
+  grid-column: 1 / 3;
+  margin: 0;
+  padding: 44px 42px 32px;
+  min-height: 400px;
+  border-radius: 15px;
+  background: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  
+}
+
+.quote-module-card__title {
+  margin: 0;
+  max-width: 920px;
+  font-family: AlhGrotesque-Medium, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #000;
+}
+
+.quote-module-card__subtitle {
+  margin: 18px 0 0;
+  max-width: 630px;
+  font-family: AlhGrotesque-Medium, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: 0.05px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.quote-module-card__footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.quote-module-card__label {
+  font-family: AlhGrotesque-Medium, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.35);
+  /* text-transform: uppercase; */
+}
+
+@media screen and (max-width: 811px) {
+  .quote-module-card {
+    margin: 0;
+    min-height: 560px;
+    padding: 28px 22px 22px;
+    border-radius: 15px;
+  }
+
+  .quote-module-card__subtitle {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .quote-module-card {
+    margin: 0;
+    border-radius: 15px;
+    min-height: 460px;
+    padding: 22px 14px 16px;
+  }
+
+  .quote-module-card__title {
+    font-size: clamp(30px, 10vw, 42px);
+  }
+
+  .quote-module-card__subtitle {
+    font-size: 13px;
+  }
+
+  .quote-module-card__label {
+    font-size: clamp(28px, 9vw, 40px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .quote-module-card {
+    grid-column: 1 / -1;
+  }
+
+  /* Явно сбрасываем «десктопные» колонки img-first (они специфичнее .quote-module-card выше) */
+  .slider-img-row.quote-module-row.quote-module-row--img-first .slider-img-row__img,
+  .slider-img-row.quote-module-row.quote-module-row--img-first .quote-module-card {
+    grid-column: 1 / -1;
+  }
+
+  .slider-img-row.quote-module-row.quote-module-row--img-first .slider-img-row__img {
+    order: 1;
+  }
+
+  .slider-img-row.quote-module-row.quote-module-row--img-first .quote-module-card {
+    order: 2;
+  }
+}
+
 /* HALF-WIDTH IMAGE CAPTIONS (removed) */
 
 
@@ -1955,6 +2533,7 @@ flex-wrap: wrap;
   margin-right: 15px;
   margin-bottom: 10px;
   line-height: 1.2em;
+  -webkit-font-smoothing: antialiased;
 }
 
 @media screen and (max-width: 811px) {
@@ -1993,7 +2572,7 @@ margin-bottom: 5px;
 font-family: AlhGrotesque-Medium, Arial;
 /*letter-spacing: 1px;*/
 font-weight: normal;
-font-size: 15px;
+font-size: 14px;
 color: black;
 width: 10%;
 /*min-width: 30%;*/
@@ -2001,7 +2580,7 @@ margin: 0;
 padding-top: 10px;
 margin-bottom: 5px;
   margin-top: -10px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.1px;
 }
 
 .tag_info{
@@ -2010,7 +2589,7 @@ margin-bottom: 5px;
 font-family: AlhGrotesque-Medium, Arial;
 /*letter-spacing: 1px;*/
 font-weight: normal;
-font-size: 15px;
+font-size: 14px;
 color: black;
 width: 20%;
 /*min-width: 30%;*/
@@ -2018,19 +2597,19 @@ margin: 0;
 padding-top: 10px;
 margin-bottom: 5px;
   margin-top: -10px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.1px;
 }
 
 
 @media screen and (max-width: 970px) {
 .tag_types {
-font-size: 15px;
+font-size: 14px;
  }
 }
 @media screen and (max-width: 811px) {
 .tag_types {
 width: 35%;
-font-size: 15px;
+font-size: 14px;
  }
 }
 @media screen and (max-width: 640px) {
@@ -2044,13 +2623,13 @@ line-height: 1.1em;
 
 @media screen and (max-width: 970px) {
 .tag_info {
-font-size: 15px;
+font-size: 14px;
  }
 }
 @media screen and (max-width: 811px) {
 .tag_info {
 width: 65%;
-font-size: 15px;
+font-size: 14px;
  }
 }
 @media screen and (max-width: 640px) {
@@ -2100,30 +2679,36 @@ margin-bottom: -5px;
 
 
 
-.types-description{
-flex-wrap: wrap;
+.types-description {
+  flex-wrap: wrap;
+  font-family: AlhGrotesque-Medium, Arial;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.2em;
+  text-align: left;
+  color: black;
+  width: 70%;
+  min-width: 30%;
+  margin: 0;
+  border-radius: 15px;
+  background-color: white;
+  letter-spacing: 0.1px;
+}
 
-font-family: AlhGrotesque-Medium, Arial;
-font-weight: normal;
-font-size: 17px;
-line-height: 1.2em;
-/*text-transform: uppercase;*/
-text-align: left;
-color: black;
-width: 70%;
-min-width: 30%;
-margin: 0;
-border-radius: 15px;
-  background-color:white;
-  letter-spacing: 0.03em;
-  /*margin-top: 10px;*/
- }
-
+/* Горизонтальный прямоугольник между абзацами: низ по baseline, верх по cap height, ширина ~150px */
+.types-description .para-sep {
+  display: inline-block;
+  width: 89px;
+  height: 0.72em;
+  background-color: #F5F5F5;
+  vertical-align: baseline;
+  margin: 0 0.1em;
+}
 
 @media screen and (max-width: 970px) {
-.types-description{
-font-size: 17px;
- }
+  .types-description {
+    font-size: 17px;
+  }
 }
 @media screen and (max-width: 811px) {
 .types-description{
@@ -2376,17 +2961,46 @@ a.underlined:hover {
   text-decoration-thickness: 0.5px;
 }
 
+/* Таблица внутри блока на 3 колонки: FORMAT/PROJECT/Location в правой трети (колонка 3 сетки) */
+.info-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
 .info-table .year-column {
-    width: 50px;
-    padding-right: 4px;
-    font-size: 11px;
-    letter-spacing: 0.5px;
-    color: rgba(0,0,0,0.8);
-    font-family: "AlhGrotesque", Arial, sans-serif;
+  width: 50px;
+  padding-right: 4px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: rgba(0,0,0,0.8);
+  font-family: "AlhGrotesque", Arial, sans-serif;
+}
+
+.info-table td:nth-child(2) {
+  width: calc(100% - 50px - 33.333%);
 }
 
 .info-table .detail-column {
-    width: 40%;
-    padding-left: 15px;
+  width: 33.333%;
 }
 
+@media screen and (max-width: 811px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+  .two-column > h1:nth-child(1),
+  .two-column > h1:nth-child(3),
+  .two-column > h1:nth-child(5),
+  .two-column > h1:nth-child(7) {
+    grid-column: 1 / -1;
+  }
+  .info-table {
+    table-layout: auto;
+  }
+  .info-table .year-column {
+    width: 60px;
+  }
+  .info-table .detail-column {
+    width: 40%;
+  }
+}

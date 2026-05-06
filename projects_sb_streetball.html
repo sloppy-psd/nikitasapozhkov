@@ -15,14 +15,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
     <link rel="manifest" href="site.webmanifest?v=1">
     <!-- FAVICON -->
-    <!-- FLICKITY -->
-    <link rel="stylesheet" type="text/css" href="/flickity-style.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
-    <!-- FLICKITY -->
+    <!-- Embla Carousel -->
+    <link rel="stylesheet" href="css/embla-carousel.css">
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+    <!-- Embla Carousel -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8H40FY6868"></script>
 <script>
@@ -33,10 +30,11 @@
   gtag('config', 'G-8H40FY6868');
 </script>
     <script src="js/cookie-consent.js?v=1.0"></script>
+    <script src="js/types-description-sep.js"></script>
     <script src="js/footer.js"></script>
 </head>
 
-<body>
+<body data-header-project="Streetball xxl">
     <!-- HEADER -->
 <!--     <nav class="header">
         <div class="sapozhkov">
@@ -50,22 +48,8 @@
 
 
 
-    <!-- HEADER 2-->
-<nav class="header2">
-        <div class="header_name_menu">
-            <a href="index.html">Nikita Sapozhkov<br>Type & graphics</a>
-        </div>
-        <div class="header_buttons_menu">
-            <a href="projects.html">Projects</a> <br> <a href="about.html">About</a> 
-        </div>
-        
-
-        <div class="header_project_name">
-            <a >Streetball xxl</a>
-        </div>
-
-    </nav>
-    <!-- HEADER 2-->
+    <!-- HEADER будет добавлен автоматически через header.js -->
+    <script src="js/header.js"></script>
 
 
 
@@ -199,7 +183,7 @@
     </div>
     <!-- FULL WIDTH IMAGE -->
     <!---------------------------- CAROUSEL COUNTER ---------------------------->
-    <script type="text/javascript" src="carousel-counter.js"></script>
+    <script src="js/embla-carousel.js"></script>
     <!---------------------------- CAROUSEL COUNTER ---------------------------->
 
 
