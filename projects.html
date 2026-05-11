@@ -15,20 +15,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
     <link rel="manifest" href="site.webmanifest?v=1">
     <!-- FAVICON -->
-    <!-- Предзагрузка изображений -->
-    <script>
-        // Предзагрузка изображений превью для более быстрого отображения
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('.projects-list a[data-preview]');
-            links.forEach(link => {
-                const imgSrc = link.getAttribute('data-preview');
-                if (imgSrc) {
-                    const img = new Image();
-                    img.src = imgSrc;
-                }
-            });
-        });
-    </script>
+    <script src="js/projects-accordion.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8H40FY6868"></script>
@@ -64,124 +51,296 @@
 
 
     <!-- PROJECTS LIST-->
-     <section class="about_back">
-    <div class="projects-list">
-        <a href="project_Lamoda.html" data-preview="img/projects-preview/Lamoda-preview-1.png">
-            <h1>Lamoda</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="project_Delimobil.html" data-preview="img/projects-preview/delimobil-preview.webp">
-            <h1>Delimobil</h1>
-        </a>
-        <div class="divider"></div>
-         <a href="project_ClanSix.html" data-preview="img/projects-preview/clan-six-preview.jpg">
-            <h1>Clan Six</h1>
-        </a>
-        <div class="divider"></div>
-         <a href="projects_vetvi.html" data-preview="img/new-baner/VetviFlowers-cover.png">
-            <h1>Vetvi flowers</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="projects_linentexture.html" data-preview="img/projects-preview/linen-texture-preview.png">
-            <h1>Linen Texture</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="project_CraftFood.html" data-preview="img/projects-preview/craft-food-preview.png">
-            <h1>Craft Food</h1>
-        </a>
-        <div class="divider"></div>
-         <a href="projects_sb_streetball.html" data-preview="img/new-baner/StreetXXL-cover.png">
-            <h1>Streetball XXL</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="asics_silver_pack.html" data-preview="img/new-baner/AsicsSilverPack-cover.png">
-            <h1>Asics Silver Pack</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="" style="color: lightgray;" data-preview="img/projects-preview/sorelle-era-preview.png">
-            <h1>Sorelle Era</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="" style="color: lightgray;" data-preview="img/projects-preview/utah-pet-ware-preview-3.png">
-            <h1>Utah Petware</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="" style="color: lightgray;" data-preview="img/projects-preview/market-express-preview.png">
-            <h1>Yandex Market Express</h1>
-        </a>
-       
-        <!-- <div class="divider"></div>
-        <a href="" style="color: lightgray;">
-            <h1>Aksai–3. Bitmap typeface</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="" style="color: lightgray;">
-            <h1>Bureau XS-S-M-L-Xl</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="" style="color: lightgray;">
-            <h1>Globus Books</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="" style="color: lightgray;">
-            <h1>Nike Air Max 270 React</h1>
-        </a>
-        <div class="divider"></div>
-        <a href="" style="color: lightgray;">
-            <h1>Nike air max dia</h1>
-        </a> -->
-        <!-- <div class="divider"></div> -->
-    </div>
+    <section class="about_back">
+        <div class="projects-list">
+            <article class="projects-accordion__item">
+                <a class="projects-accordion__link" href="project_Lamoda.html" aria-label="Open Lamoda project">
+                    <span class="projects-accordion__title">Lamoda</span>
+                    <span class="projects-accordion__meta" aria-hidden="true">
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--work">
+                            <span class="projects-accordion__pill">Fashion</span>
+                            <span class="projects-accordion__pill">Digital service</span>                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--category">
+                            <span class="projects-accordion__pill">Wordmark</span>
 
-    <!-- Контейнер для превью проектов -->
-    <div class="projects-preview-container">
-        <img id="projectPreviewImage" src="" alt="Project Preview">
-    </div>
-</section>
+                            
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--aside">
+                            <span class="projects-accordion__pill">Lamoda</span>
+                            <span class="projects-accordion__pill">2026</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="divider"></div>
+            </article>
+
+            <article class="projects-accordion__item">
+                <a class="projects-accordion__link" href="project_Delimobil.html" aria-label="Open Delimobil project">
+                    <span class="projects-accordion__title">Delimobil</span>
+                    <span class="projects-accordion__meta" aria-hidden="true">
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--work">
+                            <span class="projects-accordion__pill">Transport</span>
+                            <span class="projects-accordion__pill">Mobility</span>
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--category">
+                            <span class="projects-accordion__pill">Wordmark</span>
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--aside">
+                            <span class="projects-accordion__pill">Delimobil</span>
+                            <span class="projects-accordion__pill">2025</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="divider"></div>
+            </article>
+
+            <article class="projects-accordion__item">
+                <a class="projects-accordion__link" href="project_ClanSix.html" aria-label="Open Clan Six project">
+                    <span class="projects-accordion__title">Clan Six</span>
+                    <span class="projects-accordion__meta" aria-hidden="true">
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--work">
+                            <span class="projects-accordion__pill">Fashion</span>
+
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--category">
+                            <span class="projects-accordion__pill">Wordmark</span>
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--aside">
+                            <span class="projects-accordion__pill">Clan Six</span>
+                            <span class="projects-accordion__pill">2023</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="divider"></div>
+            </article>
+
+            <article class="projects-accordion__item">
+                <a class="projects-accordion__link" href="projects_linentexture.html" aria-label="Open Linen Texture project">
+                    <span class="projects-accordion__title">Linen Texture</span>
+                    <span class="projects-accordion__meta" aria-hidden="true">
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--work">
+                            <span class="projects-accordion__pill">Fashion</span>
+                            <span class="projects-accordion__pill">Textile</span>
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--category">
+                            <span class="projects-accordion__pill">Wordmark</span>
+                            <span class="projects-accordion__pill">Identity</span>
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--aside">
+                            <span class="projects-accordion__pill">Linen Texture</span>
+                            <span class="projects-accordion__pill">2023</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="divider"></div>
+            </article>
+
+            <article class="projects-accordion__item">
+                <a class="projects-accordion__link" href="project_CraftFood.html" aria-label="Open Craft Food project">
+                    <span class="projects-accordion__title">Craft Food</span>
+                    <span class="projects-accordion__meta" aria-hidden="true">
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--work">
+                            <span class="projects-accordion__pill">Food and Drink</span>
+
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--category">
+                            <span class="projects-accordion__pill">Custom typeface</span>
+
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--aside">
+                            <span class="projects-accordion__pill">Craft Food</span>
+                            <span class="projects-accordion__pill">2021</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="divider"></div>
+            </article>
+
+           
+            <article class="projects-accordion__item">
+                <a class="projects-accordion__link" href="projects_vetvi.html" aria-label="Open Vetvi flowers project">
+                    <span class="projects-accordion__title">Vetvi flowers</span>
+                    <span class="projects-accordion__meta" aria-hidden="true">
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--work">
+                            <span class="projects-accordion__pill">Botanical Goods</span>
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--category">
+                            <span class="projects-accordion__pill">Wordmark</span>
+                            <span class="projects-accordion__pill">Identity</span>
+
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--aside">
+                            <span class="projects-accordion__pill">Vetvi Flowers</span>
+                            <span class="projects-accordion__pill">2020</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="divider"></div>
+            </article>
+
+
+            <!-- <article class="projects-accordion__item">
+                <a class="projects-accordion__link" href="projects_sb_streetball.html" aria-label="Open Streetball XXL project">
+                    <span class="projects-accordion__title">Streetball XXL</span>
+                    <span class="projects-accordion__meta" aria-hidden="true">
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--work">
+                            <span class="projects-accordion__pill">Lettering, graphics</span>
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--category"></span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--aside">
+                            <span class="projects-accordion__pill">2020</span>
+                            <span class="projects-accordion__pill">Template</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="divider"></div>
+            </article> -->
+
+            <!-- <article class="projects-accordion__item">
+                <a class="projects-accordion__link" href="asics_silver_pack.html" aria-label="Open Asics Silver Pack project">
+                    <span class="projects-accordion__title">Asics Silver Pack</span>
+                    <span class="projects-accordion__meta" aria-hidden="true">
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--work">
+                            <span class="projects-accordion__pill">Retail graphics</span>
+                        </span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--category"></span>
+                        <span class="projects-accordion__meta-col projects-accordion__meta-col--aside">
+                            <span class="projects-accordion__pill">2024</span>
+                            <span class="projects-accordion__pill">Template</span>
+                        </span>
+                    </span>
+                </a>
+                <div class="divider"></div>
+            </article> -->
+        </div>
+
+        <div class="projects-soon">
+            <article class="projects-soon__item">
+                <img src="img/projects-preview/sorelle-era-preview.png" alt="Sorelle Era preview">
+                <div class="projects-soon__caption">
+                    <span class="projects-soon__caption-title">Sorelle Era</span>
+                    <span class="projects-soon__caption-tags">Wordmark, Visual concept</span>
+                    <span class="projects-soon__caption-status">Soon</span>
+                </div>
+            </article>
+            <article class="projects-soon__item">
+                <img src="img/projects-preview/utah-pet-ware-preview-3.png" alt="Utah Petware preview">
+                <div class="projects-soon__caption">
+                    <span class="projects-soon__caption-title">Utah Petware</span>
+                    <span class="projects-soon__caption-tags">Wordmark, Identity</span>
+                    <span class="projects-soon__caption-status">Soon</span>
+                </div>
+            </article>
+        </div>
+
+        <div class="projects-section-divider"></div>
+
+        <div class="projects-table" aria-label="All projects">
+            <div class="projects-table__row projects-table__row--header">
+                <span>Year</span>
+                <span>Project</span>
+                <span>Category</span>
+                <span>Type of work</span>
+                <span>Client</span>
+            </div>
+            <div class="projects-table__row" data-preview="img/projects-preview/Lamoda-preview-1.png" data-href="project_Lamoda.html">
+                <span>2026</span>
+                <span>Lamoda</span>
+                <span>Digital service</span>
+                <span>Wordmark refresh</span>
+                <span>Lamoda</span>
+            </div>
+            <div class="projects-table__row projects-table__row--muted" data-preview="img/projects-preview/fasten-preview.webp">
+                <span>Soon</span>
+                <span>Fasten</span>
+                <span>Transport</span>
+                <span>Wordmark</span>
+                <span>Magic Camp</span>
+            </div>
+            <div class="projects-table__row projects-table__row--muted" data-preview="img/projects-preview/gasparov-preview.webp">
+                <span>Soon</span>
+                <span>Gasparov Life</span>
+                <span>Hospitality </span>
+                <span>Wordmark, Identity</span>
+                <span>Gasparov Life</span>
+            </div>
+            <div class="projects-table__row" data-preview="img/projects-preview/delimobil-preview.webp" data-href="project_Delimobil.html">
+                <span>2025</span>
+                <span>Delimobil</span>
+                <span>Transport</span>
+                <span>Wordmark</span>
+                <span>Tuman Studio</span>
+            </div>
+            <div class="projects-table__row projects-table__row--muted" data-preview="img/projects-preview/sorelle-era-preview.png">
+                <span>Soon</span>
+                <span>Sorelle Era</span>
+                <span>Fashion</span>
+                <span>Wordmark, Visual concept</span>
+                <span>Sorelle Era</span>
+            </div>
+            <div class="projects-table__row projects-table__row--muted" data-preview="img/projects-preview/utah-pet-ware-preview-3.png">
+                <span>Soon</span>
+                <span>Utah Petware</span>
+                <span>Pet accesorises </span>
+                <span>Wordmark, Identity, Custom typeface</span>
+                <span>Utah Petware</span>
+            </div>
+            <div class="projects-table__row" data-preview="img/projects-preview/clan-six-preview.jpg" data-href="project_ClanSix.html">
+                <span>2023</span>
+                <span>Clan Six</span>
+                <span>Fashion</span>
+                <span>Wordmark</span>
+                <span>Clan Six</span>
+            </div>
+            <div class="projects-table__row" data-preview="img/projects-preview/linen-texture-preview.png" data-href="projects_linentexture.html">
+                <span>2023</span>
+                <span>Linen Texture</span>
+                <span>Fashion</span>
+                <span>Wordmark, Identity</span>
+                <span>Linen Texture</span>
+            </div>
+            <div class="projects-table__row" data-preview="img/projects-preview/craft-food-preview.png" data-href="project_CraftFood.html">
+                <span>2021</span>
+                <span>Craft Food</span>
+                <span>Food and Drink</span>
+                <span>Custom typeface</span>
+                <span>Holystick</span>
+            </div>
+            <div class="projects-table__row" data-preview="img/new-baner/StreetXXL-cover.png" data-href="projects_sb_streetball.html">
+                <span>2020</span>
+                <span>Streetball XXL</span>
+                <span>Sports & Entertainment</span>
+                <span>Lettering, Visual concept</span>
+                <span>Street Beat</span>
+            </div>
+            <div class="projects-table__row" data-preview="img/new-baner/VetviFlowers-cover.png" data-href="projects_vetvi.html">
+                <span>2020</span>
+                <span>Vetvi Flowers</span>
+                <span>Botanical Goods</span>
+                <span>Wordmark, Identity</span>
+                <span>Vetvi</span>
+            </div>
+            <div class="projects-table__row" data-preview="img/new-baner/AsicsSilverPack-cover.png" data-href="asics_silver_pack.html">
+                <span>2019</span>
+                <span>Asics Silver Pack</span>
+                <span>Retail, Fashion</span>
+                <span>Lettering, Graphics</span>
+                <span>Street Beat</span>
+            </div>
+            <div class="projects-table__row projects-table__row--muted" data-preview="img/projects-preview/market-express-preview.png">
+                <span>Soon</span>
+                <span>Market Express</span>
+                <span>Delivery service</span>
+                <span>Wordmark, Icon</span>
+                <span>Yandex</span>
+            </div>
+        </div>
+        <div class="projects-hover-preview" aria-hidden="true">
+            <img src="" alt="">
+        </div>
+    </section>
     <!-- PROJECTS LIST-->
    <!-- FOOTER будет добавлен автоматически через footer.js -->
-
-    <!-- JavaScript для отображения превью проектов -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const previewContainer = document.querySelector('.projects-preview-container');
-            const previewImage = document.getElementById('projectPreviewImage');
-            const projectLinks = document.querySelectorAll('.projects-list a[data-preview]');
-            const offsetX = 15; // горизонтальный отступ от курсора
-            const offsetY = -25; // вертикальный отступ от курсора
-            let isPreviewVisible = false;
-            
-            document.addEventListener('mousemove', function(e) {
-                if (isPreviewVisible) {
-                    updatePreviewPosition(e);
-                }
-            });
-
-            function updatePreviewPosition(e) {
-                previewContainer.style.left = (e.pageX + offsetX) + 'px';
-                previewContainer.style.top = (e.pageY + offsetY) + 'px';
-            }
-
-            projectLinks.forEach(link => {
-                link.addEventListener('mouseenter', function(e) {
-                    const previewSrc = this.getAttribute('data-preview');
-                    if (previewSrc) {
-                        previewImage.src = previewSrc;
-                        updatePreviewPosition(e);
-                        previewContainer.style.opacity = '1';
-                        previewContainer.classList.add('visible');
-                        isPreviewVisible = true;
-                    }
-                });
-
-                link.addEventListener('mouseleave', function() {
-                    previewContainer.style.opacity = '0';
-                    previewContainer.classList.remove('visible');
-                    isPreviewVisible = false;
-                });
-            });
-        });
-    </script>
 
 </body>
 

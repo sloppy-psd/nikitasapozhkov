@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- HEADER -->
     <nav class="header2">
         <div class="header_name_menu">
-            <a href="index.html">Nikita Sapozhkov<br>Graphic and type</a>
+            <a href="index.html">Nikita Sapozhkov<br>Type and Graphic</a>
         </div>
         ${projectBlock}
         <div class="header_buttons_menu">

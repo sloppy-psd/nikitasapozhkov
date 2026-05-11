@@ -10,7 +10,7 @@
    #draggableBox1 {
       top: 15%;
       left: 5%;
-   width: 25%;
+   width: 27%;
   min-width: 300px;
   background: rgba(176,140,14,0.75);
 /* background: rgba(212,153,0,0.65);*/
@@ -31,37 +31,43 @@ backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
     }
 
-@media screen and (max-width: 640px) {
-#draggableBox2 {
-  font-size: 13px;
-  min-width: 250px;
-
-}
-}
-
-
-
 .draggableBox {
-
-position: absolute;
-display: block;
-cursor: move;
-border-radius: 15px;
-margin-right: 0px;
-
-font-size: 14px;
-font-family: AlhGrotesque, Times;
-text-transform: uppercase;
-letter-spacing: 1px;
-
+  position: absolute;
+  display: block;
+  cursor: move;
+  border-radius: 15px;
+  margin-right: 0px;
+  font-family: AlhGrotesque, Times;
+  font-size: 17px;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1.0;
+  letter-spacing: -0.2px;
+  color: black;
 }
 
+@media screen and (max-width: 811px) {
+  .draggableBox {
+    font-size: 14px;
+    max-width: calc(100vw - 30px);
+  }
 
-@media screen and (max-width: 640px) {
-.draggableBox {
-  font-size: 14px;
+  #draggableBox1 {
+    left: 15px;
+    top: 80px;
+    bottom: auto;
+    width: 55%;
+    min-width: 0;
+  }
 
-}
+  #draggableBox2 {
+    right: 15px;
+    left: auto;
+    top: 50%;
+    bottom: auto;
+    width: 65%;
+    min-width: 0;
+  }
 }
 
 
@@ -81,19 +87,21 @@ letter-spacing: 1px;
 .hideButton {
   width: 50%;
   cursor: pointer;
-  background: none;
-  color: black;
   padding-left: 15px;
   padding-top: 10px;
   padding-bottom: 7px;
-/*  border: 1px solid #ccc;*/
-/*  border-radius: 35px;*/
   margin-top: 15px;
   margin-left: 15px;
   margin-bottom: 15px;
   background: white;
   color: black;
+  border: none;
   border-radius: 35px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
 }
 
 .hideButton:hover{
