@@ -93,7 +93,7 @@ linksInDraggable.forEach(link => {
 if (typeof img_main_page !== 'undefined' && img_main_page) {
   img_main_page.addEventListener('click', (e) => {
     if (!hasMoved) {
-      handleButtonClick('project_Lamoda.html');
+      handleButtonClick('project_fasten.html');
     }
   });
 }
@@ -113,7 +113,7 @@ function toggleSize(textMessageId, draggableBoxId) {
     // hideButton1.textContent = 'About ↑';
         hideButton1.textContent = 'About';
 
-    hideButton2.textContent = 'New case';
+    hideButton2.textContent = 'Fasten. Taxi service';
 
     draggableBox.style.background = '';
     draggableBox.style.backdropFilter = 'blur(5px)'; 
@@ -123,7 +123,7 @@ function toggleSize(textMessageId, draggableBoxId) {
 
     // hideButton1.textContent = 'About ↓';
     hideButton1.textContent = 'About';
-    hideButton2.textContent = 'New case';
+    hideButton2.textContent = 'Fasten. Taxi service';
 
     draggableBox.style.background = 'none';
     draggableBox.style.backdropFilter = 'none';

@@ -63,7 +63,7 @@ backdrop-filter: blur(5px);
   #draggableBox2 {
     right: 15px;
     left: auto;
-    top: 50%;
+    top: 25%;
     bottom: auto;
     width: 65%;
     min-width: 0;

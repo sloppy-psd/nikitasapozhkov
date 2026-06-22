@@ -121,8 +121,8 @@ window.addEventListener("scroll", scrollEventHandler, false);</script>
     <!-- BACKGROUND MAIN INFO -->
     <div class="back-info">
         <button class="main-back" onmouseover="myFunction1()" onmouseout="myFunction2()">
-            <h1 id="showInfo">CoFo Holz<br><br>
-CoFo Holz is an expressive serif typeface with unapologetic character. It counterbalances sharpness and softness, combining triangular wedge serifs with circular dots and terminals. The design creates a playful tension of simple geometric shapes by incorporating a modern modular feel within a classic serif typeface.</h1>
+            <h1 id="showInfo">Fasten. Fiat 500<br><br>Use the arrow keys to drive.<br>
+              Drive fast enough off the screen, and you’ll come back from the other side.</h1>
         </button>
     </div>
     <script>
@@ -140,13 +140,11 @@ CoFo Holz is an expressive serif typeface with unapologetic character. It counte
 }
 </script>
     <!-- BACKGROUND MAIN INFO -->
-    <!-- THREE JS SCENE -->
+    <!-- THREE JS SCENE: Fiat 500 (см. npm run build:fiat → js/fiat.bundle.js) -->
     <div class="canvas">
-        <canvas id="c">
-            <script type="module" src="js/script.js" ></script>
-        </canvas>
+        <canvas id="c"></canvas>
     </div>
-    <!-- THREE JS SCENE -->
+    <script src="js/fiat.bundle.js?v=3"></script>
     <!-- PROJECTS ---------------LOAD PROJECTS HERE, JUST COPY CODE-->
  <!--    <div class="projects-new">
           <a href="projects_vetvi.html">
@@ -183,10 +181,10 @@ CoFo Holz is an expressive serif typeface with unapologetic character. It counte
     </div>
 
     <div id="draggableBox2" class="draggableBox" onmousedown="startDrag(event, 'draggableBox2')">
-      <div id="hideButton2" class="hideButton" onclick="toggleSize('textMessage2', 'draggableBox2')">New case</div>
+      <div id="hideButton2" class="hideButton" onclick="toggleSize('textMessage2', 'draggableBox2')">Fasten. Taxi service</div>
       <div id="textMessage2" class="textMessage">
         <!-- <p>Second Draggable Box Content</p> -->
-                <img id="img_main_page" src="img/lamoda/12_BANNER.png" alt="ns_lamoda_main_00" style="cursor: pointer;">
+                <img id="img_main_page" src="img/new-baner/ns_fasten_baner.png" alt="ns_fasten_main_00" style="cursor: pointer;">
 
       </div>
     </div>
@@ -201,20 +199,6 @@ CoFo Holz is an expressive serif typeface with unapologetic character. It counte
 <!-- <script src="js/footer.js"></script> -->
 
 <!-- DRAGGABLE BOX ON THE MAIN PAGE -->
-
-<script>
-// Принудительно перезагрузить шрифт
-document.fonts.ready.then(() => {
-  // Создаем принудительное обновление шрифта
-  const fontFaceSet = document.fonts;
-  fontFaceSet.forEach(font => fontFaceSet.delete(font));
-  
-  // Перезагружаем страницу с очисткой кеша
-  if (!window.location.href.includes('nocache')) {
-    window.location.href = window.location.href + (window.location.href.includes('?') ? '&' : '?') + 'nocache=' + new Date().getTime();
-  }
-});
-</script>
 
 <script src="js/draggable_box.js?v=1.1"></script>
 <script src="js/cookie-consent.js?v=1.0"></script>
